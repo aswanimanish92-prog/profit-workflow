@@ -1,0 +1,23 @@
+[
+ {
+  "id": "c1",
+  "label": "Mon 12 Oct",
+  "summary": "23 sales · ₦61,000 in · 4 payments out",
+  "group": "comparison",
+  "recorded": false
+ },
+ {
+  "id": "c2",
+  "label": "Tue 13 Oct",
+  "summary": "19 sales · ₦58,000 in · 3 payments out",
+  "group": "comparison",
+  "recorded": false
+ },
+ {
+  "id": "c3",
+  "label": "Wed 7 Oct",
+  "summary": "21 sales · ₦60,000 in · 5 payments out",
+  "group": "earlier",
+  "recorded": false
+ }
+]

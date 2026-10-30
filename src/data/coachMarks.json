@@ -1,0 +1,233 @@
+{
+ "home": [
+  {
+   "id": "card",
+   "target": "card",
+   "title": "Your business at a glance",
+   "body": "This card turns your Moniepoint payments into today's profit, so you can see how the shop is doing without doing any sums.",
+   "byView": {
+    "mtd_till_date": {
+     "body": "This card turns your Moniepoint payments into your profit for {month} so far, so you can see how the shop is doing without doing any sums."
+    },
+    "active_days": {
+     "body": "This card turns your Moniepoint payments into profit across the {days} you've recorded, so you can see how the shop is doing without doing any sums."
+    }
+   }
+  },
+  {
+   "id": "timeframe",
+   "target": "timeframe",
+   "title": "Today or the whole month",
+   "body": "Switch between today's profit and {month} so far. We'll remember what you pick.",
+   "byView": {
+    "partial": {
+     "body": "Switch between today's profit and {month} so far. With {days} recorded, today is the fairer number for now."
+    }
+   }
+  },
+  {
+   "id": "value",
+   "target": "value",
+   "title": "Your profit, kept private",
+   "body": "Tap the number or the eye to show or hide it. It follows your wallet balance setting and hides again when you leave the app."
+  },
+  {
+   "id": "chip",
+   "target": "chip",
+   "title": "Your daily streak",
+   "body": "The flame grows each day you check and close your numbers. Tap it to see your streak, set a reminder or pick rest days."
+  },
+  {
+   "id": "status",
+   "target": "status",
+   "title": "What needs you now",
+   "body": "This line shows one thing at a time: the most important, like payments to sort or a day you missed."
+  },
+  {
+   "id": "insight",
+   "target": "insight",
+   "title": "How you're trending",
+   "body": "Compares this stretch with the one before. Percentages and arrows stay visible even when amounts are hidden."
+  },
+  {
+   "id": "cta",
+   "target": "cta",
+   "title": "Your next step",
+   "body": "The button takes you straight to what the status line asks for, like reviewing today's payments."
+  },
+  {
+   "id": "open",
+   "target": "card",
+   "title": "Tap anywhere else for more",
+   "body": "The rest of the card opens Business overview on the same time frame, with your week, month and where your money went.",
+   "variants": {
+    "wholeCard": "Tap the card to get started. Once your numbers come in, it opens Business overview."
+   }
+  },
+  {
+   "id": "mai",
+   "target": "mai",
+   "title": "MAI sums it up",
+   "body": "MAI tells you your profit in one line, for the time frame you picked.",
+   "byView": {
+    "partial": {
+     "body": "MAI tells you today's profit and what your {days} add up to this month, in one line."
+    }
+   }
+  }
+ ],
+ "profit": [
+  {
+   "id": "profit",
+   "target": "profit",
+   "title": "Today's profit, worked out for you",
+   "body": "We take what came in from sales and subtract stock and expenses, straight from your Moniepoint payments. No notebook, no sums.",
+   "byView": {
+    "mtd_till_date": {
+     "title": "Your {month} profit, worked out for you",
+     "body": "Your profit for {month} so far, with today's payments included. We take sales and subtract stock and expenses, straight from your Moniepoint payments."
+    },
+    "active_days": {
+     "title": "Profit on the days you've recorded",
+     "body": "Your profit across the {days} you've recorded in {month}, with today's payments included. No notebook, no sums."
+    }
+   }
+  },
+  {
+   "id": "month",
+   "target": "month",
+   "title": "Is the month on track?",
+   "body": "Your profit so far this month, and how it compares with the same day last month.",
+   "byView": {
+    "mtd_till_date": {
+     "title": "Today and the month's pace",
+     "body": "Today's profit so far, and how {month} compares with the same day last month."
+    },
+    "active_days": {
+     "title": "Today and the month's pace",
+     "body": "Today's profit so far, and how {month} compares with the same day last month."
+    },
+    "partial": {
+     "title": "Your month so far",
+     "body": "Only {days} recorded this month, so there's nothing fair to compare with yet. Add the days you missed for a true month total."
+    }
+   }
+  },
+  {
+   "id": "breakdown",
+   "target": "breakdown",
+   "title": "See where it comes from",
+   "body": "Sales in, stock and expenses out. Every line is built from your payments, so you can check the working."
+  },
+  {
+   "id": "accuracy",
+   "target": "accuracy",
+   "title": "It gets sharper with you",
+   "body": "It starts as a guess. Sort a few payments or add cash and the accuracy goes up."
+  },
+  {
+   "id": "txn",
+   "target": "txn",
+   "title": "Tell us what each payment was",
+   "body": "Only you know if a transfer was a sale, stock or personal money. Tap a category and profit updates instantly. Personal money never counts."
+  },
+  {
+   "id": "cash",
+   "target": "cash",
+   "title": "Include cash and other banks",
+   "body": "Sold for cash or paid from another bank? Add it so the profit covers your whole business, not just Moniepoint."
+  },
+  {
+   "id": "how",
+   "target": "how",
+   "title": "Want the full working?",
+   "body": "Tap here any time to see exactly how today's profit is calculated."
+  },
+  {
+   "id": "submit",
+   "target": "submit",
+   "title": "Close your day",
+   "body": "Submit to lock in today's profit. Your streak grows and the card on Home updates with the new number."
+  }
+ ],
+ "overview": [
+  {
+   "id": "tabs",
+   "target": "tabs",
+   "title": "Pick your time frame",
+   "body": "Switch between today, this week and this month. It opens on the time frame you picked on Home, and everything on this page follows the tab."
+  },
+  {
+   "id": "blue",
+   "target": "blue",
+   "title": "What you kept",
+   "body": "Your profit for the period after stock and expenses, how it compares with last time, and the sales and spending behind it.",
+   "variants": {
+    "setup": "Set up profit once and this card shows what you kept after stock and expenses, for any day, week or month."
+   }
+  },
+  {
+   "id": "missing",
+   "target": "missing",
+   "title": "Fill the gaps",
+   "body": "Dashed days have no records yet. Add them so your month's profit is the real total."
+  },
+  {
+   "id": "todo",
+   "target": "todo",
+   "title": "One thing to do next",
+   "body": "The single step that makes these numbers more complete, like reviewing today or catching up a missed day."
+  },
+  {
+   "id": "money",
+   "target": "money",
+   "title": "Every naira in and out",
+   "body": "All the money that moved through your account, including payments still pending. Profit only counts what's business."
+  },
+  {
+   "id": "services",
+   "target": "services",
+   "title": "Run more of your business here",
+   "body": "Send invoices now. Items and Customers are coming soon: tap one to join the waitlist."
+  },
+  {
+   "id": "chart",
+   "target": "chart",
+   "title": "See the trend",
+   "body": "Sales and spending over recent weeks. The shaded gap between the lines is your profit.",
+   "variants": {
+    "setup": "Once profit is set up, this shows your sales and spending week by week."
+   }
+  },
+  {
+   "id": "insight",
+   "target": "insight",
+   "title": "Know what changed",
+   "body": "A plain-language read of your numbers and what moved them. Tap Listen to hear it."
+  },
+  {
+   "id": "pay",
+   "target": "pay",
+   "title": "Pay yourself safely",
+   "body": "How much you've taken this month, and how much is safe to take without starving the business."
+  },
+  {
+   "id": "records",
+   "target": "records",
+   "title": "Keep your records complete",
+   "body": "Each dot is a day. Fill in missed days so your profit and trends stay accurate."
+  },
+  {
+   "id": "accuracy",
+   "target": "accuracy",
+   "title": "See how sure we are",
+   "body": "Check exactly how profit is worked out and how accurate the estimate is. Reviewing more payments raises it."
+  },
+  {
+   "id": "streak",
+   "target": "streak",
+   "title": "Keep your streak going",
+   "body": "Close your numbers each day to grow it. Tap to set a reminder or pick rest days."
+  }
+ ]
+}

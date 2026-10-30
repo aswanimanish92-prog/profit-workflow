@@ -1,0 +1,1044 @@
+[
+ {
+  "id": "D75",
+  "title": "Established · This week (D = 75)",
+  "daysRecorded": 75,
+  "blue": {
+   "today": "T1",
+   "week": "W1",
+   "month": "M1"
+  },
+  "defaultPeriod": "week",
+  "money": {
+   "in": 342000,
+   "out": 288500,
+   "pending": 24000
+  },
+  "chart": {
+   "kind": "live",
+   "subtitle": "Last 8 full weeks, by week",
+   "headline": "Your weekly profit grew from ₦46K to ₦66K in 8 weeks.",
+   "points": [
+    {
+     "label": "24 Aug",
+     "sales": 250,
+     "expenses": 204
+    },
+    {
+     "label": "31 Aug",
+     "sales": 262,
+     "expenses": 210
+    },
+    {
+     "label": "7 Sep",
+     "sales": 278,
+     "expenses": 219
+    },
+    {
+     "label": "14 Sep",
+     "sales": 284,
+     "expenses": 226
+    },
+    {
+     "label": "21 Sep",
+     "sales": 290,
+     "expenses": 232
+    },
+    {
+     "label": "28 Sep",
+     "sales": 276,
+     "expenses": 229
+    },
+    {
+     "label": "5 Oct",
+     "sales": 296,
+     "expenses": 238
+    },
+    {
+     "label": "12 Oct",
+     "sales": 305,
+     "expenses": 254
+    }
+   ],
+   "footnote": "This week so far is in the blue card. Tap a week to see its days."
+  },
+  "insight": {
+   "heading": "This week so far",
+   "body": "You sold ₦305,400 and spent ₦254,100, so you kept ₦51,300. That's ₦6,700 more than the same days last week, mostly because you spent less on stock.",
+   "rows": [
+    {
+     "title": "Where each ₦100 of sales goes",
+     "sub": "You keep ₦17 of every ₦100",
+     "figures": "month"
+    },
+    {
+     "title": "Your best days",
+     "sub": "Saturdays earn about twice as much as Tuesdays"
+    }
+   ],
+   "figures": "week"
+  },
+  "payYourself": {
+   "taken": 60000,
+   "safe": 10000
+  },
+  "records": {
+   "summary": "12 of 12 trading days recorded",
+   "days": [
+    {
+     "dow": "S",
+     "state": "recorded"
+    },
+    {
+     "dow": "S",
+     "state": "rest"
+    },
+    {
+     "dow": "M",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "W",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "F",
+     "state": "recorded"
+    },
+    {
+     "dow": "S",
+     "state": "recorded"
+    },
+    {
+     "dow": "S",
+     "state": "rest"
+    },
+    {
+     "dow": "M",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "W",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "F",
+     "state": "today"
+    }
+   ]
+  },
+  "invoices": {
+   "label": "Oct so far",
+   "count": 14,
+   "paid": 1120000,
+   "paidCount": 11,
+   "unpaid": 330000,
+   "unpaidCount": 3
+  },
+  "accuracy": "High",
+  "streakRow": {
+   "title": "30-day streak",
+   "sub": "Your best ever"
+  },
+  "liveAccuracy": true
+ },
+ {
+  "id": "D75L",
+  "title": "Established · Loss today (D = 75)",
+  "daysRecorded": 75,
+  "blue": {
+   "today": "TL",
+   "week": "W1",
+   "month": "M1"
+  },
+  "defaultPeriod": "today",
+  "money": {
+   "in": 342000,
+   "out": 288500,
+   "pending": 24000
+  },
+  "chart": {
+   "kind": "live",
+   "subtitle": "Last 8 full weeks, by week",
+   "headline": "Your weekly profit grew from ₦46K to ₦66K in 8 weeks.",
+   "points": [
+    {
+     "label": "24 Aug",
+     "sales": 250,
+     "expenses": 204
+    },
+    {
+     "label": "31 Aug",
+     "sales": 262,
+     "expenses": 210
+    },
+    {
+     "label": "7 Sep",
+     "sales": 278,
+     "expenses": 219
+    },
+    {
+     "label": "14 Sep",
+     "sales": 284,
+     "expenses": 226
+    },
+    {
+     "label": "21 Sep",
+     "sales": 290,
+     "expenses": 232
+    },
+    {
+     "label": "28 Sep",
+     "sales": 276,
+     "expenses": 229
+    },
+    {
+     "label": "5 Oct",
+     "sales": 296,
+     "expenses": 238
+    },
+    {
+     "label": "12 Oct",
+     "sales": 305,
+     "expenses": 254
+    }
+   ],
+   "footnote": "This week so far is in the blue card. Tap a week to see its days."
+  },
+  "insight": {
+   "heading": "This week so far",
+   "body": "You sold ₦305,400 and spent ₦254,100, so you kept ₦51,300. That's ₦6,700 more than the same days last week, mostly because you spent less on stock.",
+   "rows": [
+    {
+     "title": "Where each ₦100 of sales goes",
+     "sub": "You keep ₦17 of every ₦100",
+     "figures": "month"
+    },
+    {
+     "title": "Your best days",
+     "sub": "Saturdays earn about twice as much as Tuesdays"
+    }
+   ],
+   "figures": "week"
+  },
+  "payYourself": {
+   "taken": 60000,
+   "safe": 10000
+  },
+  "records": {
+   "summary": "12 of 12 trading days recorded",
+   "days": [
+    {
+     "dow": "S",
+     "state": "recorded"
+    },
+    {
+     "dow": "S",
+     "state": "rest"
+    },
+    {
+     "dow": "M",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "W",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "F",
+     "state": "recorded"
+    },
+    {
+     "dow": "S",
+     "state": "recorded"
+    },
+    {
+     "dow": "S",
+     "state": "rest"
+    },
+    {
+     "dow": "M",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "W",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "F",
+     "state": "today"
+    }
+   ]
+  },
+  "invoices": {
+   "label": "Oct so far",
+   "count": 14,
+   "paid": 1120000,
+   "paidCount": 11,
+   "unpaid": 330000,
+   "unpaidCount": 3
+  },
+  "accuracy": "High",
+  "streakRow": {
+   "title": "30-day streak",
+   "sub": "Your best ever"
+  },
+  "liveAccuracy": true
+ },
+ {
+  "id": "M0",
+  "title": "M0 · Not set up",
+  "daysRecorded": 0,
+  "blue": {
+   "today": "S0",
+   "week": "S0",
+   "month": "S0"
+  },
+  "defaultPeriod": "week",
+  "money": {
+   "in": 342000,
+   "out": 288500,
+   "pending": 24000
+  },
+  "chart": {
+   "kind": "example"
+  },
+  "records": {
+   "summary": "Your first recorded day will show here.",
+   "days": [
+    {
+     "dow": "S",
+     "state": "empty"
+    },
+    {
+     "dow": "S",
+     "state": "empty"
+    },
+    {
+     "dow": "M",
+     "state": "empty"
+    },
+    {
+     "dow": "T",
+     "state": "empty"
+    },
+    {
+     "dow": "W",
+     "state": "empty"
+    },
+    {
+     "dow": "T",
+     "state": "empty"
+    },
+    {
+     "dow": "F",
+     "state": "empty"
+    },
+    {
+     "dow": "S",
+     "state": "empty"
+    },
+    {
+     "dow": "S",
+     "state": "empty"
+    },
+    {
+     "dow": "M",
+     "state": "empty"
+    },
+    {
+     "dow": "T",
+     "state": "empty"
+    },
+    {
+     "dow": "W",
+     "state": "empty"
+    },
+    {
+     "dow": "T",
+     "state": "empty"
+    },
+    {
+     "dow": "F",
+     "state": "today"
+    }
+   ]
+  },
+  "invoices": {
+   "label": "This week",
+   "count": 5,
+   "paid": 287000,
+   "paidCount": 3,
+   "unpaid": 123000,
+   "unpaidCount": 2
+  },
+  "accuracy": "Not set up"
+ },
+ {
+  "id": "S1",
+  "title": "Setup started",
+  "daysRecorded": 0,
+  "blue": {
+   "today": "S1",
+   "week": "S1",
+   "month": "S1"
+  },
+  "defaultPeriod": "week",
+  "money": {
+   "in": 342000,
+   "out": 288500,
+   "pending": 24000
+  },
+  "chart": {
+   "kind": "example"
+  },
+  "records": {
+   "summary": "Your first recorded day will show here.",
+   "days": [
+    {
+     "dow": "S",
+     "state": "empty"
+    },
+    {
+     "dow": "S",
+     "state": "empty"
+    },
+    {
+     "dow": "M",
+     "state": "empty"
+    },
+    {
+     "dow": "T",
+     "state": "empty"
+    },
+    {
+     "dow": "W",
+     "state": "empty"
+    },
+    {
+     "dow": "T",
+     "state": "empty"
+    },
+    {
+     "dow": "F",
+     "state": "empty"
+    },
+    {
+     "dow": "S",
+     "state": "empty"
+    },
+    {
+     "dow": "S",
+     "state": "empty"
+    },
+    {
+     "dow": "M",
+     "state": "empty"
+    },
+    {
+     "dow": "T",
+     "state": "empty"
+    },
+    {
+     "dow": "W",
+     "state": "empty"
+    },
+    {
+     "dow": "T",
+     "state": "empty"
+    },
+    {
+     "dow": "F",
+     "state": "today"
+    }
+   ]
+  },
+  "invoices": {
+   "label": "This week",
+   "count": 5,
+   "paid": 287000,
+   "paidCount": 3,
+   "unpaid": 123000,
+   "unpaidCount": 2
+  },
+  "accuracy": "Not set up"
+ },
+ {
+  "id": "M3",
+  "title": "M3 · Early days, Today chip (D = 4)",
+  "daysRecorded": 4,
+  "blue": {
+   "today": "D4T",
+   "week": "N1",
+   "month": "M5"
+  },
+  "defaultPeriod": "today",
+  "money": {
+   "in": 71200,
+   "out": 48900,
+   "pending": 3000
+  },
+  "chart": {
+   "kind": "live",
+   "subtitle": "By day, since you started",
+   "headline": "4 days so far. Each day you record adds a point.",
+   "points": [
+    {
+     "label": "Tue 13",
+     "sales": 52,
+     "expenses": 40
+    },
+    {
+     "label": "Wed 14",
+     "sales": 58,
+     "expenses": 45
+    },
+    {
+     "label": "Thu 15",
+     "sales": 49,
+     "expenses": 38
+    },
+    {
+     "label": "Fri 16",
+     "sales": 65,
+     "expenses": 52.6
+    }
+   ],
+   "footnote": "Switches to weekly lines once you have 4 full weeks."
+  },
+  "insight": {
+   "heading": "Today so far",
+   "body": "You sold ₦65,000 and spent ₦52,600, so you kept ₦12,400. That's ₦2,100 more than yesterday.",
+   "rows": [
+    {
+     "title": "Where each ₦100 of sales goes",
+     "sub": "You kept ₦19 of every ₦100 today"
+    },
+    {
+     "title": "Your best days",
+     "sub": "Opens after 30 recorded days · 4 of 30",
+     "locked": true
+    }
+   ]
+  },
+  "records": {
+   "summary": "4 days recorded since you started on Tue 13 Oct",
+   "days": [
+    {
+     "dow": "S",
+     "state": "empty"
+    },
+    {
+     "dow": "S",
+     "state": "empty"
+    },
+    {
+     "dow": "M",
+     "state": "empty"
+    },
+    {
+     "dow": "T",
+     "state": "empty"
+    },
+    {
+     "dow": "W",
+     "state": "empty"
+    },
+    {
+     "dow": "T",
+     "state": "empty"
+    },
+    {
+     "dow": "F",
+     "state": "empty"
+    },
+    {
+     "dow": "S",
+     "state": "empty"
+    },
+    {
+     "dow": "S",
+     "state": "empty"
+    },
+    {
+     "dow": "M",
+     "state": "empty"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "W",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "F",
+     "state": "today"
+    }
+   ]
+  },
+  "invoices": {
+   "label": "Today",
+   "count": 2,
+   "paid": 85000,
+   "paidCount": 1,
+   "unpaid": 75000,
+   "unpaidCount": 1
+  },
+  "accuracy": "High",
+  "streakRow": {
+   "title": "4-day streak",
+   "sub": "Your best so far · keep it going"
+  }
+ },
+ {
+  "id": "M5",
+  "title": "M5 · This month chip, no comparison yet (D = 20)",
+  "daysRecorded": 20,
+  "blue": {
+   "today": "T1",
+   "week": "W1",
+   "month": "M5"
+  },
+  "defaultPeriod": "month",
+  "money": {
+   "in": 1268000,
+   "out": 1041500,
+   "pending": 24000
+  },
+  "chart": {
+   "kind": "live",
+   "subtitle": "By day, last 12 trading days",
+   "headline": "Saturdays are your biggest days.",
+   "points": [
+    {
+     "label": "Sat 3",
+     "sales": 95,
+     "expenses": 72
+    },
+    {
+     "label": "Mon 5",
+     "sales": 60,
+     "expenses": 50
+    },
+    {
+     "label": "Tue 6",
+     "sales": 58,
+     "expenses": 48
+    },
+    {
+     "label": "Wed 7",
+     "sales": 64,
+     "expenses": 52
+    },
+    {
+     "label": "Thu 8",
+     "sales": 66,
+     "expenses": 55
+    },
+    {
+     "label": "Fri 9",
+     "sales": 72,
+     "expenses": 60
+    },
+    {
+     "label": "Sat 10",
+     "sales": 100,
+     "expenses": 78
+    },
+    {
+     "label": "Mon 12",
+     "sales": 70,
+     "expenses": 55
+    },
+    {
+     "label": "Tue 13",
+     "sales": 63,
+     "expenses": 50
+    },
+    {
+     "label": "Wed 14",
+     "sales": 57,
+     "expenses": 47
+    },
+    {
+     "label": "Thu 15",
+     "sales": 75,
+     "expenses": 57
+    },
+    {
+     "label": "Fri 16",
+     "sales": 76,
+     "expenses": 60
+    }
+   ],
+   "footnote": "Switches to weekly lines once you have 4 full weeks."
+  },
+  "insight": {
+   "heading": "This month so far",
+   "body": "You sold ₦835,000 and spent ₦695,200, so you kept ₦139,800. Saturdays brought in the most.",
+   "rows": [
+    {
+     "title": "Where each ₦100 of sales goes",
+     "sub": "You keep ₦17 of every ₦100",
+     "figures": "monthNew"
+    },
+    {
+     "title": "Your best days",
+     "sub": "Saturdays earn about twice as much as Tuesdays"
+    }
+   ],
+   "figures": "monthNew"
+  },
+  "records": {
+   "summary": "12 of 12 trading days recorded",
+   "days": [
+    {
+     "dow": "S",
+     "state": "recorded"
+    },
+    {
+     "dow": "S",
+     "state": "rest"
+    },
+    {
+     "dow": "M",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "W",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "F",
+     "state": "recorded"
+    },
+    {
+     "dow": "S",
+     "state": "recorded"
+    },
+    {
+     "dow": "S",
+     "state": "rest"
+    },
+    {
+     "dow": "M",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "W",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "F",
+     "state": "today"
+    }
+   ]
+  },
+  "invoices": {
+   "label": "Oct so far",
+   "count": 14,
+   "paid": 1120000,
+   "paidCount": 11,
+   "unpaid": 330000,
+   "unpaidCount": 3
+  },
+  "accuracy": "High",
+  "streakRow": {
+   "title": "12-day streak",
+   "sub": "Best: 12 days"
+  },
+  "liveAccuracy": true
+ },
+ {
+  "id": "O4",
+  "title": "O4 · Missed days this week",
+  "daysRecorded": 40,
+  "blue": {
+   "today": "T1",
+   "week": "G1",
+   "month": "M1"
+  },
+  "defaultPeriod": "week",
+  "money": {
+   "in": 342000,
+   "out": 288500,
+   "pending": 24000
+  },
+  "chart": {
+   "kind": "live",
+   "subtitle": "Last 8 full weeks, by week",
+   "headline": "Your weekly profit grew from ₦46K to ₦57K in 8 weeks.",
+   "points": [
+    {
+     "label": "24 Aug",
+     "sales": 250,
+     "expenses": 204
+    },
+    {
+     "label": "31 Aug",
+     "sales": 262,
+     "expenses": 210
+    },
+    {
+     "label": "7 Sep",
+     "sales": 278,
+     "expenses": 219
+    },
+    {
+     "label": "14 Sep",
+     "sales": 284,
+     "expenses": 226
+    },
+    {
+     "label": "21 Sep",
+     "sales": 290,
+     "expenses": 232
+    },
+    {
+     "label": "28 Sep",
+     "sales": 276,
+     "expenses": 229
+    },
+    {
+     "label": "5 Oct",
+     "sales": 305,
+     "expenses": 240
+    },
+    {
+     "label": "12 Oct",
+     "sales": 258,
+     "expenses": 221
+    }
+   ],
+   "footnote": "The week of 5 Oct is missing Wed 7, so it looks lower than it was."
+  },
+  "insight": {
+   "heading": "This week so far",
+   "body": "From the 3 days you recorded, you sold ₦186,400 and spent ₦152,600, so you kept ₦33,800.",
+   "rows": [
+    {
+     "title": "Where each ₦100 of sales goes",
+     "sub": "You keep ₦17 of every ₦100"
+    },
+    {
+     "title": "Your best days",
+     "sub": "Saturdays earn about twice as much as Tuesdays"
+    }
+   ]
+  },
+  "records": {
+   "summary": "9 of 12 trading days recorded",
+   "days": [
+    {
+     "dow": "S",
+     "state": "recorded"
+    },
+    {
+     "dow": "S",
+     "state": "rest"
+    },
+    {
+     "dow": "M",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "W",
+     "state": "missed"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "F",
+     "state": "recorded"
+    },
+    {
+     "dow": "S",
+     "state": "recorded"
+    },
+    {
+     "dow": "S",
+     "state": "rest"
+    },
+    {
+     "dow": "M",
+     "state": "missed"
+    },
+    {
+     "dow": "T",
+     "state": "missed"
+    },
+    {
+     "dow": "W",
+     "state": "recorded"
+    },
+    {
+     "dow": "T",
+     "state": "recorded"
+    },
+    {
+     "dow": "F",
+     "state": "today"
+    }
+   ]
+  },
+  "invoices": {
+   "label": "This week",
+   "count": 5,
+   "paid": 287000,
+   "paidCount": 3,
+   "unpaid": 123000,
+   "unpaidCount": 2
+  },
+  "accuracy": "Medium"
+ },
+ {
+  "id": "O1",
+  "title": "O1 · Lapsed, welcome back",
+  "daysRecorded": 9,
+  "blue": {
+   "today": "B1",
+   "week": "B1",
+   "month": "B1"
+  },
+  "defaultPeriod": "week",
+  "money": {
+   "in": 342000,
+   "out": 288500,
+   "pending": 24000
+  },
+  "chart": {
+   "kind": "example"
+  },
+  "records": {
+   "summary": "0 of 12 trading days recorded",
+   "days": [
+    {
+     "dow": "S",
+     "state": "missed"
+    },
+    {
+     "dow": "S",
+     "state": "rest"
+    },
+    {
+     "dow": "M",
+     "state": "missed"
+    },
+    {
+     "dow": "T",
+     "state": "missed"
+    },
+    {
+     "dow": "W",
+     "state": "missed"
+    },
+    {
+     "dow": "T",
+     "state": "missed"
+    },
+    {
+     "dow": "F",
+     "state": "missed"
+    },
+    {
+     "dow": "S",
+     "state": "missed"
+    },
+    {
+     "dow": "S",
+     "state": "rest"
+    },
+    {
+     "dow": "M",
+     "state": "missed"
+    },
+    {
+     "dow": "T",
+     "state": "missed"
+    },
+    {
+     "dow": "W",
+     "state": "missed"
+    },
+    {
+     "dow": "T",
+     "state": "missed"
+    },
+    {
+     "dow": "F",
+     "state": "today"
+    }
+   ],
+   "cta": "Start with today"
+  },
+  "invoices": {
+   "label": "This week",
+   "count": 5,
+   "paid": 287000,
+   "paidCount": 3,
+   "unpaid": 123000,
+   "unpaidCount": 2
+  },
+  "accuracy": "Low"
+ }
+]

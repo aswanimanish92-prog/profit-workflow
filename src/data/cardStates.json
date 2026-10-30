@@ -1,0 +1,1707 @@
+[
+ {
+  "id": "A1",
+  "group": "A. New users",
+  "title": "First visit, sales today",
+  "when": "Never opened MBL; business payments received today.",
+  "tap": "Whole card → MBL intro, then setup.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "locked"
+  },
+  "status": {
+   "tone": "plain",
+   "text": "You received ₦84,500 from 23 payments today"
+  },
+  "insight": {
+   "kind": "text",
+   "label": "See how much of it is profit, takes 2 minutes"
+  },
+  "cta": {
+   "label": "See profit",
+   "target": "intro"
+  },
+  "wholeCard": true
+ },
+ {
+  "id": "A2",
+  "group": "A. New users",
+  "title": "First visit, no sales yet",
+  "when": "Never opened MBL; no payments yet today.",
+  "tap": "Whole card → MBL intro.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "locked"
+  },
+  "status": {
+   "tone": "plain",
+   "text": "Know what you really make from every sale"
+  },
+  "insight": {
+   "kind": "none"
+  },
+  "cta": {
+   "label": "Get started",
+   "target": "intro"
+  },
+  "wholeCard": true
+ },
+ {
+  "id": "A3",
+  "group": "A. New users",
+  "title": "No business activity",
+  "when": "No business payments in the last 30 days.",
+  "tap": "Same card as A2, placed below Services on Home.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "locked"
+  },
+  "status": {
+   "tone": "plain",
+   "text": "Know what you really make from every sale"
+  },
+  "insight": {
+   "kind": "none"
+  },
+  "cta": {
+   "label": "Get started",
+   "target": "intro"
+  },
+  "wholeCard": true
+ },
+ {
+  "id": "A4",
+  "group": "A. New users",
+  "title": "Setup started, not finished",
+  "when": "User left setup part-way.",
+  "tap": "Continue → the exact step they left.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "locked"
+  },
+  "status": {
+   "tone": "plain",
+   "text": "Setup 2 of 3 done"
+  },
+  "insight": {
+   "kind": "bar",
+   "progress": 0.66
+  },
+  "cta": {
+   "label": "Continue",
+   "target": "setup"
+  },
+  "wholeCard": true
+ },
+ {
+  "id": "A5",
+  "group": "A. New users",
+  "title": "Ready for first calculation",
+  "when": "Setup done; first profit not yet calculated.",
+  "tap": "Calculate → today's sales review.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "locked"
+  },
+  "status": {
+   "tone": "dot",
+   "text": "Your profit is ready to calculate"
+  },
+  "insight": {
+   "kind": "text",
+   "label": "23 sales waiting since 9:10 AM"
+  },
+  "cta": {
+   "label": "Calculate",
+   "target": "review"
+  },
+  "wholeCard": true
+ },
+ {
+  "id": "A6",
+  "group": "A. New users",
+  "title": "First profit calculated",
+  "when": "First return to Home after the first calculation.",
+  "tap": "Value is revealed once by default; tooltip shows once. Then the user's mask preference applies.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "forceReveal": true,
+   "tooltip": "Tap to hide your profit",
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "progress",
+   "label": "Record 6 more days to unlock your weekly view",
+   "filled": 1,
+   "total": 7
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 1
+  }
+ },
+ {
+  "id": "B1",
+  "group": "B. Returning: reveal and freshness",
+  "title": "Calculated today, masked",
+  "when": "Calculated today, nothing new since; mask on. Amounts stay hidden; % and arrows show.",
+  "tap": "Eye → reveal in place. Rest of card → MBL today.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "Updated 2:15 PM today · Tap to view"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  },
+  "startMasked": true
+ },
+ {
+  "id": "B2",
+  "group": "B. Returning: reveal and freshness",
+  "title": "Calculated today, revealed",
+  "when": "Same as B1 after tapping the eye. Re-masks when the app goes to background.",
+  "tap": "Eye → hide. Rest of card → MBL today.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "forceReveal": true,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "Based on transactions up to 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "B3",
+  "group": "B. Returning: reveal and freshness",
+  "title": "Morning, yesterday is final",
+  "when": "Early morning; yesterday closed; no sales yet today.",
+  "tap": "View details → yesterday's breakdown.",
+  "header": "Yesterday's profit (13 Oct)",
+  "value": {
+   "mode": "amount",
+   "amount": 15100
+  },
+  "status": {
+   "tone": "plain",
+   "text": "Final for yesterday · No sales yet today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "open",
+   "days": 6
+  }
+ },
+ {
+  "id": "B4",
+  "group": "B. Returning: reveal and freshness",
+  "title": "Today not calculated yet",
+  "when": "Afternoon; last calculation was yesterday. Yesterday's number shown in grey.",
+  "tap": "Calculate today → today's review.",
+  "header": "Estimated profit (Yesterday)",
+  "value": {
+   "mode": "amount",
+   "amount": 15100,
+   "stale": true
+  },
+  "status": {
+   "tone": "dot",
+   "text": "Today not calculated · 18 sales since 12:00 AM"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Calculate today",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "open",
+   "days": 6
+  }
+ },
+ {
+  "id": "B5",
+  "group": "B. Returning: reveal and freshness",
+  "title": "A few days behind",
+  "when": "Last calculation 2–6 days ago. Streak already ended; coverage shown on the insight.",
+  "tap": "Catch up → the catch-up queue on the Manage page.",
+  "header": "Estimated profit (12 Oct)",
+  "value": {
+   "mode": "amount",
+   "amount": 9800,
+   "stale": true
+  },
+  "status": {
+   "tone": "warn",
+   "text": "2 days not recorded"
+  },
+  "insight": {
+   "kind": "text",
+   "label": "Last 7 days ₦31,000 · 5 of 7 days recorded"
+  },
+  "cta": {
+   "label": "Catch up",
+   "target": "catch-up"
+  }
+ },
+ {
+  "id": "B6",
+  "group": "B. Returning: reveal and freshness",
+  "title": "Lapsed, welcome back",
+  "when": "Last calculation 7+ days ago. Old value hidden; insight hidden until coverage recovers. Tier is kept.",
+  "tap": "Catch up in 2 min → bulk review of the missed days.",
+  "header": "Welcome back",
+  "value": {
+   "mode": "locked"
+  },
+  "status": {
+   "tone": "dot",
+   "text": "214 transactions since 2 Sep"
+  },
+  "insight": {
+   "kind": "none"
+  },
+  "cta": {
+   "label": "Catch up in 2 min",
+   "target": "catch-up"
+  }
+ },
+ {
+  "id": "C1",
+  "group": "C. New transactions",
+  "title": "New sales since last update",
+  "when": "Sales received after the as-of time. Sales total follows the mask.",
+  "tap": "Update → review only the new sales.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "dot",
+   "text": "6 new sales since 2:15 PM · +₦8,200 in sales",
+   "maskedText": "6 new sales since 2:15 PM · +₦ ••• in sales"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Update",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "C2",
+  "group": "C. New transactions",
+  "title": "Money out since last update",
+  "when": "Transfers out after the as-of time that may be expenses.",
+  "tap": "Review → mark each as expense or not.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "dot",
+   "text": "3 payments out since 2:15 PM, may be expenses"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Review",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "C3",
+  "group": "C. New transactions",
+  "title": "Mixed activity",
+  "when": "Both new sales and money out since the as-of time.",
+  "tap": "Update → combined review list.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "dot",
+   "text": "9 new transactions since 2:15 PM"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Update",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "C4",
+  "group": "C. New transactions",
+  "title": "A counted sale was reversed",
+  "when": "A sale already in today's profit was reversed or refunded. The confirmed number is now wrong.",
+  "tap": "Review → the reversal and its effect.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "warn",
+   "text": "1 reversal changes today's profit"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Review",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "C5",
+  "group": "C. New transactions",
+  "title": "Late transaction for a closed day",
+  "when": "A transaction for 13 Oct settles this morning. Yesterday reopens; the streak is not affected.",
+  "tap": "Review → 13 Oct with the late item.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 4300
+  },
+  "status": {
+   "tone": "warn",
+   "text": "1 late transaction for 13 Oct"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Review",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 6
+  }
+ },
+ {
+  "id": "C6",
+  "group": "C. New transactions",
+  "title": "Just updated",
+  "when": "User updated and returned to Home. Value counts up from ₦12,400; delta chip shows for this session only.",
+  "tap": "View details → today's Profit review.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 14500,
+   "countFrom": 12400
+  },
+  "status": {
+   "tone": "delta",
+   "text": "Updated just now",
+   "delta": 2100
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 47300,
+   "pct": 17,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "C7",
+  "group": "C. New transactions",
+  "title": "Sales arriving while on Home",
+  "when": "A new sale lands while the user is looking. The count ticks 6 → 7 in place; no toast, no layout shift.",
+  "tap": "Update → review the new sales.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "dot",
+   "text": "6 new sales since 2:15 PM",
+   "liveTick": true
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Update",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "D1",
+  "group": "D. Streaks",
+  "title": "Today closed",
+  "when": "Today's profit calculated at least once. Later sales make it pending but don't un-count the day.",
+  "tap": "Chip → streak sheet.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 6:40 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "D2",
+  "group": "D. Streaks",
+  "title": "Today open, before closing time",
+  "when": "Today not calculated; before the user's closing time (default 6 PM). No streak nag yet.",
+  "tap": "Calculate → today's review.",
+  "header": "Estimated profit (Yesterday)",
+  "value": {
+   "mode": "amount",
+   "amount": 15100,
+   "stale": true
+  },
+  "status": {
+   "tone": "dot",
+   "text": "Today not calculated · 12 sales since 12:00 AM"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Calculate",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "open",
+   "days": 5
+  }
+ },
+ {
+  "id": "D3",
+  "group": "D. Streaks",
+  "title": "At risk",
+  "when": "After closing time, today still open. Ring pulses once per session; one push reminder.",
+  "tap": "Keep streak → today's review.",
+  "header": "Estimated profit (Yesterday)",
+  "value": {
+   "mode": "amount",
+   "amount": 15100,
+   "stale": true
+  },
+  "status": {
+   "tone": "warn",
+   "text": "Close today to keep your 5-day streak"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Keep streak",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "risk",
+   "days": 5
+  }
+ },
+ {
+  "id": "D4",
+  "group": "D. Streaks",
+  "title": "Grace window",
+  "when": "Next morning before 12 noon; yesterday never closed. It still counts if closed now.",
+  "tap": "Close yesterday → 13 Oct review.",
+  "header": "Estimated profit (12 Oct)",
+  "value": {
+   "mode": "amount",
+   "amount": 9800,
+   "stale": true
+  },
+  "status": {
+   "tone": "warn",
+   "text": "Close yesterday by 12 noon to keep your 5-day streak"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Close yesterday",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "open",
+   "days": 5
+  }
+ },
+ {
+  "id": "D5",
+  "group": "D. Streaks",
+  "title": "Saved by a freeze",
+  "when": "Grace window passed; a banked freeze covered the missed day. Shown for one day.",
+  "tap": "Chip → streak sheet showing the frozen day.",
+  "header": "Estimated profit (12 Oct)",
+  "value": {
+   "mode": "amount",
+   "amount": 9800,
+   "stale": true
+  },
+  "status": {
+   "tone": "neutral",
+   "text": "Your streak was saved by a freeze. 0 left"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Calculate today",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "freeze",
+   "days": 5
+  }
+ },
+ {
+  "id": "D6",
+  "group": "D. Streaks",
+  "title": "Streak ended",
+  "when": "Grace passed, no freeze. Chip hidden. Message shown for one day only, in neutral grey.",
+  "tap": "Calculate today → starts a new streak.",
+  "header": "Estimated profit (12 Oct)",
+  "value": {
+   "mode": "amount",
+   "amount": 9800,
+   "stale": true
+  },
+  "status": {
+   "tone": "neutral",
+   "text": "Your 5-day streak ended. Best: 12 days. Start again today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Calculate today",
+   "target": "review"
+  }
+ },
+ {
+  "id": "D7",
+  "group": "D. Streaks",
+  "title": "Restarted",
+  "when": "First day closed after a break.",
+  "tap": "Chip → streak sheet.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 11200,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 3:05 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 1
+  }
+ },
+ {
+  "id": "D8",
+  "group": "D. Streaks",
+  "title": "Rest day",
+  "when": "Today is a shop rest day set in MBL settings (e.g. Sunday). Skipped, never counted against the streak.",
+  "tap": "View details → Saturday's final.",
+  "header": "Estimated profit (Sat 10 Oct)",
+  "value": {
+   "mode": "amount",
+   "amount": 15100
+  },
+  "status": {
+   "tone": "plain",
+   "text": "Rest day, your streak is safe"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "rest",
+   "days": 5
+  }
+ },
+ {
+  "id": "D9",
+  "group": "D. Streaks",
+  "title": "Milestone + unlock",
+  "when": "Day 7 in a row, which also unlocks the weekly view: one combined message. Light confetti on first view.",
+  "tap": "See weekly view → MBL weekly.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "celebrate",
+   "text": "7-day streak! Your weekly view is unlocked",
+   "confetti": true
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "See weekly view",
+   "target": "overview-week"
+  },
+  "chip": {
+   "tone": "gold",
+   "days": 7
+  }
+ },
+ {
+  "id": "D10",
+  "group": "D. Streaks",
+  "title": "New personal best",
+  "when": "Streak passes the previous best. Gold chip for the day.",
+  "tap": "Chip → streak sheet.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "celebrate",
+   "text": "New best: 13 days"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "gold",
+   "days": 13
+  }
+ },
+ {
+  "id": "T1",
+  "group": "E. History tiers",
+  "title": "Progress (D 1–6)",
+  "when": "4 days recorded so far. Dots fill as days are recorded, consecutive or not.",
+  "tap": "Insight → MBL today.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "progress",
+   "label": "4 of 7 days recorded · 3 more to unlock weekly",
+   "filled": 4,
+   "total": 7
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 4
+  }
+ },
+ {
+  "id": "T2",
+  "group": "E. History tiers",
+  "title": "Weekly (D 7+)",
+  "when": "7+ days recorded and at least 4 of the last 7.",
+  "tap": "Insight → MBL weekly.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "T2-f",
+  "group": "E. History tiers",
+  "title": "Weekly, short coverage",
+  "when": "Fewer than 4 of the last 7 days recorded: total shown with its coverage.",
+  "tap": "Insight → MBL weekly with gaps marked.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 31000,
+   "after": " · 3 of 7 days recorded"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 1
+  }
+ },
+ {
+  "id": "T3",
+  "group": "E. History tiers",
+  "title": "Week-on-week (D 14+)",
+  "when": "Both 7-day windows have 5+ recorded days. Windows end on the last closed day.",
+  "tap": "Insight → MBL week-on-week.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "T3-d",
+  "group": "E. History tiers",
+  "title": "Week-on-week, down",
+  "when": "Same as T3 with a decline. Red with a down arrow; no extra alarm copy.",
+  "tap": "Insight → MBL week-on-week.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 38600,
+   "pct": -9,
+   "suffix": "vs previous 7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "T3-0",
+  "group": "E. History tiers",
+  "title": "Week-on-week, flat",
+  "when": "Change within ±2%.",
+  "tap": "Insight → MBL week-on-week.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45900,
+   "flat": true,
+   "suffix": "about the same as last week"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "T3-n",
+  "group": "E. History tiers",
+  "title": "Previous week was a loss",
+  "when": "Zero or negative base: no percentage, absolute change instead.",
+  "tap": "Insight → MBL week-on-week.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 8000,
+   "absChange": 3000,
+   "suffix": "than previous 7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "T3-f",
+  "group": "E. History tiers",
+  "title": "Week-on-week, short coverage",
+  "when": "One window has fewer than 5 recorded days: falls back to the weekly total.",
+  "tap": "Insight → MBL weekly.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "after": " · compare when both weeks have 5+ days",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 2
+  }
+ },
+ {
+  "id": "T4",
+  "group": "E. History tiers",
+  "title": "Rolling 30 days (D 30+)",
+  "when": "21+ of the last 30 days recorded. User can pin Week or 30 days in settings.",
+  "tap": "Insight → MBL 30 days.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 30 days",
+   "amount": 182000
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 9
+  }
+ },
+ {
+  "id": "T5",
+  "group": "E. History tiers",
+  "title": "Month-on-month (D 60+)",
+  "when": "Both 30-day windows have 21+ recorded days.",
+  "tap": "Insight → MBL 30-day comparison.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 30 days",
+   "amount": 182000,
+   "pct": 8,
+   "suffix": "vs previous 30"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 9
+  }
+ },
+ {
+  "id": "R-W",
+  "group": "E. History tiers",
+  "title": "Monday weekly recap",
+  "when": "Monday until viewed or end of day; needs T3. Calendar week, then back to rolling.",
+  "tap": "Insight → last week's report.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last week (5–11 Oct)",
+   "amount": 48900,
+   "pct": 6,
+   "suffix": "vs week before"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 9
+  }
+ },
+ {
+  "id": "R-M",
+  "group": "E. History tiers",
+  "title": "Monthly recap, 1st–3rd",
+  "when": "First 3 days of the month; needs T5 and 21+ days recorded in both months.",
+  "tap": "Insight → September report.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "September",
+   "amount": 176000,
+   "pct": 5,
+   "suffix": "vs August"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 9
+  }
+ },
+ {
+  "id": "F1",
+  "group": "F. Outcomes and edge cases",
+  "title": "Profit",
+  "when": "Profit above zero. Kobo set smaller, as on the wallet card.",
+  "tap": "View details → today's Profit review.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "F2",
+  "group": "F. Outcomes and edge cases",
+  "title": "Loss",
+  "when": "Expenses above sales. The word Loss, not just a minus sign, in muted red.",
+  "tap": "See why → today's loss on the Manage page (blue card TL). Profit page uses the loss-day payments.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 2400,
+   "loss": true,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "Expenses were higher than sales today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "See why",
+   "target": "overview"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  },
+  "day": "loss"
+ },
+ {
+  "id": "F3",
+  "group": "F. Outcomes and edge cases",
+  "title": "Zero sales",
+  "when": "Day closed at ₦0 with no sales. Still counts for the streak.",
+  "tap": "View details → today's Profit review.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 0
+  },
+  "status": {
+   "tone": "plain",
+   "text": "No sales recorded today",
+   "muted": true
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "F4",
+  "group": "F. Outcomes and edge cases",
+  "title": "Missing cost prices",
+  "when": "Some sales have no cost price, so profit is an upper bound.",
+  "tap": "Add costs → the 3 items without a cost price.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "approx": true,
+   "live": true
+  },
+  "status": {
+   "tone": "warn",
+   "text": "3 sales missing cost price, profit may be lower"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Add costs",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "F5",
+  "group": "F. Outcomes and edge cases",
+  "title": "Very large amounts",
+  "when": "₦10M or more on the card abbreviates; insight amounts abbreviate from ₦1M. Full figure in MBL.",
+  "tap": "View details → full figures.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12350000,
+   "compact": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 81200000,
+   "pct": 4,
+   "suffix": "vs previous 7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "F6",
+  "group": "F. Outcomes and edge cases",
+  "title": "Loading",
+  "when": "Fetching. Header and chip stay; value and lines show skeleton bars. Mask state is kept.",
+  "tap": "Not tappable until loaded.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "skeleton"
+  },
+  "status": {
+   "tone": "plain",
+   "text": ""
+  },
+  "insight": {
+   "kind": "none"
+  },
+  "cta": {
+   "label": "",
+   "target": "none"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  },
+  "loading": true
+ },
+ {
+  "id": "F7",
+  "group": "F. Outcomes and edge cases",
+  "title": "Offline",
+  "when": "No connection. Cached value with its as-of time; pending count hidden because it is unknown.",
+  "tap": "View details → cached MBL view.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "Offline · showing 2:15 PM today",
+   "muted": true
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "F8",
+  "group": "F. Outcomes and edge cases",
+  "title": "Couldn't load",
+  "when": "Profit service error. Value stays locked; never shows ₦0.",
+  "tap": "Retry → refetch in place.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "locked"
+  },
+  "status": {
+   "tone": "error",
+   "text": "Couldn't load your profit"
+  },
+  "insight": {
+   "kind": "none"
+  },
+  "cta": {
+   "label": "Retry",
+   "target": "retry"
+  }
+ },
+ {
+  "id": "F9",
+  "group": "F. Outcomes and edge cases",
+  "title": "Midnight passed",
+  "when": "App left open over midnight. On next foreground, Today becomes Yesterday and the chip turns outlined.",
+  "tap": "Calculate → today's review.",
+  "header": "Estimated profit (Yesterday)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "stale": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "Today not calculated · No sales yet",
+   "dark": true
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Calculate",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "open",
+   "days": 6
+  }
+ },
+ {
+  "id": "F11",
+  "group": "F. Outcomes and edge cases",
+  "title": "More than one business",
+  "when": "User has several business accounts; card shows the one selected under Accounts (open question 5).",
+  "tap": "Business name → switch business.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "plain",
+   "text": "As of 2:15 PM today"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  },
+  "sub": "Mama Nkechi Provisions"
+ },
+ {
+  "id": "P1",
+  "group": "Overlaps: worked examples",
+  "title": "Tue 7:10 PM",
+  "when": "20 days recorded, 5-day streak. Calculated at 2:15 PM; 6 new sales since.",
+  "tap": "Why: today already counts, so no at-risk message (rule 5). New transactions (rule 8) win the status line.",
+  "header": "Estimated profit (Today)",
+  "value": {
+   "mode": "amount",
+   "amount": 12400,
+   "live": true
+  },
+  "status": {
+   "tone": "dot",
+   "text": "6 new sales since 2:15 PM"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Update",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "closed",
+   "days": 5
+  }
+ },
+ {
+  "id": "P2",
+  "group": "Overlaps: worked examples",
+  "title": "Wed 9:00 AM",
+  "when": "Tuesday never calculated. 5-day streak, 1 freeze banked.",
+  "tap": "Why: grace window open (rule 4) outranks everything below it. The freeze is only used if noon passes.",
+  "header": "Estimated profit (Mon 12 Oct)",
+  "value": {
+   "mode": "amount",
+   "amount": 9800,
+   "stale": true
+  },
+  "status": {
+   "tone": "warn",
+   "text": "Close yesterday by 12 noon to keep your 5-day streak"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last 7 days",
+   "amount": 45200,
+   "pct": 12,
+   "suffix": "vs previous 7",
+   "figures": "last7"
+  },
+  "cta": {
+   "label": "Close yesterday",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "open",
+   "days": 5
+  }
+ },
+ {
+  "id": "P3",
+  "group": "Overlaps: worked examples",
+  "title": "Mon 8:30 AM",
+  "when": "64 days recorded, 30-day streak reached Saturday. Sunday was a rest day.",
+  "tap": "Why: celebration (rule 6) takes the status line; Monday recap takes the insight line.",
+  "header": "Saturday's profit (10 Oct)",
+  "value": {
+   "mode": "amount",
+   "amount": 15100
+  },
+  "status": {
+   "tone": "celebrate",
+   "text": "30-day streak!"
+  },
+  "insight": {
+   "kind": "change",
+   "label": "Last week (5–11 Oct)",
+   "amount": 48900,
+   "pct": 6,
+   "suffix": "vs week before"
+  },
+  "cta": {
+   "label": "View details",
+   "target": "review"
+  },
+  "chip": {
+   "tone": "gold",
+   "days": 30
+  }
+ },
+ {
+  "id": "P4",
+  "group": "Overlaps: worked examples",
+  "title": "Thu 3:00 PM",
+  "when": "9 days recorded; last calculation 19 days ago.",
+  "tap": "Why: lapsed — insight hidden, old value locked, chip hidden. Tier T2 is kept and returns once coverage recovers.",
+  "header": "Welcome back",
+  "value": {
+   "mode": "locked"
+  },
+  "status": {
+   "tone": "dot",
+   "text": "214 transactions since 25 Sep"
+  },
+  "insight": {
+   "kind": "none"
+  },
+  "cta": {
+   "label": "Catch up in 2 min",
+   "target": "catch-up"
+  }
+ }
+]

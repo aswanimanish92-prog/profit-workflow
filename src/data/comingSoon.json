@@ -1,0 +1,22 @@
+[
+ {
+  "id": "items",
+  "name": "Items",
+  "pitch": "Track what you sell and what each item costs you, so every sale shows its real profit.",
+  "uses": [
+   "Know my best sellers",
+   "Track stock",
+   "Set cost prices"
+  ]
+ },
+ {
+  "id": "customers",
+  "name": "Customers",
+  "pitch": "See who buys from you most and who still owes you money, straight from your payments.",
+  "uses": [
+   "Track who owes me",
+   "Know my best customers",
+   "Send reminders"
+  ]
+ }
+]

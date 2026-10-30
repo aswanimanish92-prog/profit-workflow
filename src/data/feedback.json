@@ -1,0 +1,12 @@
+[
+ {
+  "id": "recommend",
+  "question": "How likely are you to recommend this to someone else?",
+  "scale": { "kind": "number", "min": 1, "max": 10, "low": "Not likely", "high": "Very likely" }
+ },
+ {
+  "id": "daily",
+  "question": "How likely are you to do this every day?",
+  "scale": { "kind": "labels", "options": ["Very unlikely", "Unlikely", "Not sure", "Likely", "Very likely"] }
+ }
+]

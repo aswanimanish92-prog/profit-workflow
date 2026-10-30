@@ -1,0 +1,107 @@
+{
+ "overviewScenario": "D75L",
+ "profitBaseline": {
+  "sales": 0,
+  "stock": 0,
+  "expenses": 200
+ },
+ "transactions": [
+  {
+   "id": "MBL-DEMO-L-00318",
+   "name": "Chika N.",
+   "meta": "Demo Bank A • 2093316475",
+   "time": "5:10 PM",
+   "amount": -2000,
+   "source": "moniepoint"
+  },
+  {
+   "id": "MBL-DEMO-L-00317",
+   "name": "Tunde A.",
+   "meta": "Demo Bank C • 1180427765",
+   "time": "4:35 PM",
+   "amount": 1000,
+   "source": "moniepoint"
+  },
+  {
+   "id": "MBL-DEMO-L-00316",
+   "name": "Gas refill",
+   "meta": "Demo Bank D • 5521908843",
+   "time": "3:40 PM",
+   "amount": -4000,
+   "source": "moniepoint",
+   "category": "Expense"
+  },
+  {
+   "id": "MBL-DEMO-L-00315",
+   "name": "Card customer",
+   "meta": "POS • **** 4242",
+   "time": "2:55 PM",
+   "amount": 3900,
+   "source": "moniepoint",
+   "category": "Sales"
+  },
+  {
+   "id": "MBL-DEMO-L-00314",
+   "name": "Iya Bose (palm oil)",
+   "meta": "Demo Bank B • 7730215598",
+   "time": "1:20 PM",
+   "amount": -7200,
+   "source": "moniepoint",
+   "category": "Restock"
+  },
+  {
+   "id": "MBL-DEMO-L-00313",
+   "name": "Card customer",
+   "meta": "POS • **** 9995",
+   "time": "12:40 PM",
+   "amount": 5600,
+   "source": "moniepoint",
+   "category": "Sales"
+  },
+  {
+   "id": "MBL-DEMO-L-00312",
+   "name": "Rider Femi",
+   "meta": "Demo Bank D • 6799073685",
+   "time": "12:05 PM",
+   "amount": -1500,
+   "source": "moniepoint",
+   "category": "Expense"
+  },
+  {
+   "id": "MBL-DEMO-L-00311",
+   "name": "Folake O.",
+   "meta": "Demo Bank B • 0327850974",
+   "time": "11:50 AM",
+   "amount": 2800,
+   "source": "moniepoint",
+   "category": "Sales"
+  },
+  {
+   "id": "MBL-DEMO-L-00310",
+   "name": "Mama Ngozi (tomatoes)",
+   "meta": "Demo Bank D • 4105084320",
+   "time": "10:15 AM",
+   "amount": -9500,
+   "source": "moniepoint",
+   "category": "Restock"
+  },
+  {
+   "id": "MBL-DEMO-L-00309",
+   "name": "Card customer",
+   "meta": "POS • **** 4242",
+   "time": "9:30 AM",
+   "amount": 4200,
+   "source": "moniepoint",
+   "category": "Sales"
+  },
+  {
+   "id": "MBL-DEMO-L-00308",
+   "name": "Card customer",
+   "meta": "POS • **** 4242",
+   "time": "8:45 AM",
+   "amount": 3500,
+   "source": "moniepoint",
+   "category": "Sales"
+  }
+ ]
+}

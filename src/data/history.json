@@ -1,0 +1,75 @@
+{
+ "today": {
+  "word": "today",
+  "range": "Today so far, compared with last Wednesday",
+  "compareText": "last Wednesday",
+  "before": {
+   "sales": 0,
+   "expenses": 0
+  },
+  "previous": {
+   "sales": 43100,
+   "expenses": 33035
+  }
+ },
+ "todayEarly": {
+  "word": "today",
+  "range": "Today so far, compared with yesterday",
+  "compareText": "yesterday",
+  "before": {
+   "sales": 0,
+   "expenses": 0
+  },
+  "previous": {
+   "sales": 29200,
+   "expenses": 29045
+  }
+ },
+ "week": {
+  "word": "this week",
+  "range": "This week so far (Mon – Wed), compared with the same days last week",
+  "compareText": "the same days last week",
+  "before": {
+   "sales": 51600,
+   "expenses": 60087
+  },
+  "previous": {
+   "sales": 74600,
+   "expenses": 75676
+  }
+ },
+ "last7": {
+  "word": "in the last 7 days",
+  "range": "Last 7 days, compared with the 7 days before",
+  "compareText": "the 7 days before",
+  "before": {
+   "sales": 264600,
+   "expenses": 197008
+  },
+  "previous": {
+   "sales": 184600,
+   "expenses": 206465
+  }
+ },
+ "month": {
+  "word": "this month",
+  "range": "This month so far, compared with the same dates last month",
+  "compareText": "the same dates last month",
+  "before": {
+   "sales": 996500,
+   "expenses": 735581
+  },
+  "previous": {
+   "sales": 980000,
+   "expenses": 715366
+  }
+ },
+ "monthNew": {
+  "word": "this month",
+  "range": "This month so far",
+  "before": {
+   "sales": 996500,
+   "expenses": 735581
+  }
+ }
+}

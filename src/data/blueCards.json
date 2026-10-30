@@ -1,0 +1,432 @@
+[
+ {
+  "id": "W1",
+  "title": "This week (default)",
+  "note": "₦4,400 more sales + ₦2,300 less spending = ₦6,700 more profit. The three numbers always add up.",
+  "kind": "live",
+  "period": "Profit this week",
+  "range": "Mon 12 – Fri 16 Oct, compared with the same days last week",
+  "amount": 51300,
+  "change": {
+   "amount": 6700,
+   "text": "more than last week"
+  },
+  "rows": [
+   {
+    "label": "Sales",
+    "amount": 305400,
+    "change": 4400,
+    "good": true
+   },
+   {
+    "label": "Expenses",
+    "amount": 254100,
+    "change": -2300,
+    "good": true
+   }
+  ],
+  "verdict": "You sold more and spent less. Well done.",
+  "todo": {
+   "tone": "info",
+   "text": "Accuracy: High · 4 payments to review",
+   "target": "review"
+  },
+  "figures": "week"
+ },
+ {
+  "id": "T1",
+  "title": "Today vs last Friday",
+  "note": "Today compares with the same weekday last week, up to the same time, because Fridays and Tuesdays trade differently.",
+  "kind": "live",
+  "period": "Profit today",
+  "range": "Fri 16 Oct so far, compared with last Friday",
+  "amount": 11100,
+  "change": {
+   "amount": 1100,
+   "text": "more than last Friday"
+  },
+  "rows": [
+   {
+    "label": "Sales",
+    "amount": 66000,
+    "change": 0,
+    "good": true
+   },
+   {
+    "label": "Expenses",
+    "amount": 54900,
+    "change": -1100,
+    "good": true
+   }
+  ],
+  "verdict": "Same sales as last Friday, but you spent less.",
+  "todo": {
+   "tone": "ok",
+   "text": "Accuracy: High · all payments reviewed",
+   "target": "review"
+  },
+  "figures": "today"
+ },
+ {
+  "id": "M1",
+  "title": "This month vs same dates",
+  "note": "1–16 Oct against 1–16 Sep, never against the whole of September.",
+  "kind": "live",
+  "period": "Profit this month",
+  "range": "1 – 16 Oct, compared with 1 – 16 Sep",
+  "amount": 139800,
+  "change": {
+   "amount": 10200,
+   "text": "more than 1–16 Sep"
+  },
+  "rows": [
+   {
+    "label": "Sales",
+    "amount": 835000,
+    "change": 64000,
+    "good": true
+   },
+   {
+    "label": "Expenses",
+    "amount": 695200,
+    "change": 53800,
+    "good": false
+   }
+  ],
+  "verdict": "Sales grew faster than your spending.",
+  "todo": {
+   "tone": "info",
+   "text": "Accuracy: High · 4 payments to review",
+   "target": "review"
+  },
+  "figures": "month"
+ },
+ {
+  "id": "N1",
+  "title": "Not enough history yet",
+  "note": "No comparison against an empty week. The date tells the user when it starts.",
+  "kind": "live",
+  "period": "Profit this week",
+  "range": "Tue 13 – Fri 16 Oct",
+  "amount": 40200,
+  "change": null,
+  "noCompare": "Compare from Mon 26 Oct",
+  "rows": [
+   {
+    "label": "Sales",
+    "amount": 239400
+   },
+   {
+    "label": "Expenses",
+    "amount": 199200
+   }
+  ],
+  "verdict": "You kept ₦17 of every ₦100 you sold.",
+  "todo": {
+   "tone": "ok",
+   "text": "Accuracy: High · all payments reviewed",
+   "target": "review"
+  }
+ },
+ {
+  "id": "L1",
+  "title": "Loss week",
+  "note": "Card stays blue so it informs rather than alarms. The word Loss and the red pills carry the meaning.",
+  "kind": "live",
+  "period": "Profit this week",
+  "range": "Mon 12 – Fri 16 Oct, compared with the same days last week",
+  "amount": 3100,
+  "loss": true,
+  "change": {
+   "amount": -47700,
+   "text": "less than last week"
+  },
+  "rows": [
+   {
+    "label": "Sales",
+    "amount": 262000,
+    "change": -39000,
+    "good": false
+   },
+   {
+    "label": "Expenses",
+    "amount": 265100,
+    "change": 8700,
+    "good": false
+   }
+  ],
+  "verdict": "You spent ₦3,100 more than you made this week. Tap to see why.",
+  "todo": {
+   "tone": "info",
+   "text": "Accuracy: High · 2 payments to review",
+   "target": "review"
+  }
+ },
+ {
+  "id": "TL",
+  "title": "Loss today",
+  "note": "Matches Home card F2 and the loss-day Profit page: ₦20,000 sales − ₦22,400 expenses = Loss ₦2,400.",
+  "kind": "live",
+  "period": "Profit today",
+  "range": "Fri 16 Oct so far, compared with last Friday",
+  "amount": 2400,
+  "loss": true,
+  "change": {
+   "amount": -12400,
+   "text": "less than last Friday"
+  },
+  "rows": [
+   {
+    "label": "Sales",
+    "amount": 20000,
+    "change": -9000,
+    "good": false
+   },
+   {
+    "label": "Expenses",
+    "amount": 22400,
+    "change": 3400,
+    "good": false
+   }
+  ],
+  "verdict": "You spent ₦2,400 more than you made today, mostly on stock.",
+  "todo": {
+   "tone": "info",
+   "text": "Accuracy: Medium · 2 payments to review",
+   "target": "review"
+  },
+  "figures": "today"
+ },
+ {
+  "id": "X1",
+  "title": "Sold more, spent even more",
+  "note": "Both rows went up; the verdict points at costs because they grew faster.",
+  "kind": "live",
+  "period": "Profit this week",
+  "range": "Mon 12 – Fri 16 Oct, compared with the same days last week",
+  "amount": 38900,
+  "change": {
+   "amount": -5700,
+   "text": "less than last week"
+  },
+  "rows": [
+   {
+    "label": "Sales",
+    "amount": 321000,
+    "change": 20000,
+    "good": true
+   },
+   {
+    "label": "Expenses",
+    "amount": 282100,
+    "change": 25700,
+    "good": false
+   }
+  ],
+  "verdict": "You sold more, but spending grew faster. Check your costs.",
+  "todo": {
+   "tone": "ok",
+   "text": "Accuracy: High · all payments reviewed",
+   "target": "review"
+  }
+ },
+ {
+  "id": "A1",
+  "title": "Payments to review",
+  "note": "Unreviewed money lowers accuracy, so profit shows ≈ and the to-do line turns amber.",
+  "kind": "live",
+  "period": "Profit this week",
+  "range": "Mon 12 – Fri 16 Oct, compared with the same days last week",
+  "amount": 51300,
+  "approx": true,
+  "change": {
+   "amount": 6700,
+   "text": "more than last week"
+  },
+  "rows": [
+   {
+    "label": "Sales",
+    "amount": 305400,
+    "change": 4400,
+    "good": true
+   },
+   {
+    "label": "Expenses",
+    "amount": 254100,
+    "change": -2300,
+    "good": true
+   }
+  ],
+  "verdict": "You sold more and spent less. Well done.",
+  "todo": {
+   "tone": "warn",
+   "text": "Accuracy: Medium · 12 payments to review",
+   "target": "review"
+  }
+ },
+ {
+  "id": "G1",
+  "title": "Days missing this week",
+  "note": "The period line says which days are missing; comparison waits until they are recorded.",
+  "kind": "live",
+  "period": "Profit this week",
+  "range": "From 3 of 5 days: Mon 12 and Tue 13 not recorded",
+  "amount": 33800,
+  "change": null,
+  "noCompare": "Can't compare yet: 2 days missing",
+  "rows": [
+   {
+    "label": "Sales",
+    "amount": 186400
+   },
+   {
+    "label": "Expenses",
+    "amount": 152600
+   }
+  ],
+  "verdict": "Record Monday and Tuesday to see how this week compares.",
+  "todo": {
+   "tone": "warn",
+   "text": "3 days not recorded · Catch up",
+   "target": "catch-up"
+  }
+ },
+ {
+  "id": "U1",
+  "title": "Up to date, nothing to do",
+  "note": "With nothing to fix, the to-do line reassures instead of disappearing.",
+  "kind": "live",
+  "period": "Profit this week",
+  "range": "Mon 12 – Fri 16 Oct, compared with the same days last week",
+  "amount": 51300,
+  "change": {
+   "amount": 6700,
+   "text": "more than last week"
+  },
+  "rows": [
+   {
+    "label": "Sales",
+    "amount": 305400,
+    "change": 4400,
+    "good": true
+   },
+   {
+    "label": "Expenses",
+    "amount": 254100,
+    "change": -2300,
+    "good": true
+   }
+  ],
+  "verdict": "You sold more and spent less. Well done.",
+  "todo": {
+   "tone": "ok",
+   "text": "Accuracy: High · all payments reviewed",
+   "target": "review"
+  }
+ },
+ {
+  "id": "D4T",
+  "title": "Today, early days",
+  "note": "M3: Today chip, compared with yesterday.",
+  "kind": "live",
+  "period": "Profit today",
+  "range": "Fri 16 Oct so far, compared with yesterday",
+  "amount": 12400,
+  "change": {
+   "amount": 2100,
+   "text": "more than yesterday"
+  },
+  "rows": [
+   {
+    "label": "Sales",
+    "amount": 65000,
+    "change": 9600,
+    "good": true
+   },
+   {
+    "label": "Expenses",
+    "amount": 52600,
+    "change": 7500,
+    "good": false
+   }
+  ],
+  "verdict": "Sales grew faster than your spending.",
+  "todo": {
+   "tone": "ok",
+   "text": "Accuracy: High · all payments reviewed",
+   "target": "review"
+  },
+  "figures": "todayEarly"
+ },
+ {
+  "id": "M5",
+  "title": "This month, no comparison yet",
+  "note": "M5: month comparison starts next month.",
+  "kind": "live",
+  "period": "Profit this month",
+  "range": "1 – 16 Oct",
+  "amount": 139800,
+  "change": null,
+  "noCompare": "Month comparison starts 1 Nov",
+  "rows": [
+   {
+    "label": "Sales",
+    "amount": 835000
+   },
+   {
+    "label": "Expenses",
+    "amount": 695200
+   }
+  ],
+  "verdict": "You kept ₦17 of every ₦100 you sold this month.",
+  "todo": {
+   "tone": "info",
+   "text": "Accuracy: High · 4 payments to review",
+   "target": "review"
+  },
+  "figures": "monthNew"
+ },
+ {
+  "id": "S0",
+  "title": "Not set up",
+  "note": "No masking: the card is the setup prompt, using money the user already received.",
+  "kind": "setup",
+  "setupTitle": "Know your real profit",
+  "setupText": "You received ₦342,000 this week. See how much of it is profit. It takes 2 minutes.",
+  "setupCta": {
+   "label": "Set up profit",
+   "target": "setup"
+  },
+  "setupNote": "Uses the payments already in your account"
+ },
+ {
+  "id": "S1",
+  "title": "Setup started",
+  "note": "Shows progress and returns the user to the exact step they left.",
+  "kind": "setup",
+  "setupTitle": "Almost there",
+  "setupText": "Finish setting up to see your profit for this week.",
+  "steps": {
+   "done": 2,
+   "total": 3
+  },
+  "setupCta": {
+   "label": "Continue setup",
+   "target": "setup"
+  },
+  "setupNote": "About 1 minute left"
+ },
+ {
+  "id": "B1",
+  "title": "Welcome back",
+  "note": "Lapsed for 7+ days: one clear action, last profit shown small so it isn't mistaken for this week's.",
+  "kind": "setup",
+  "setupTitle": "Welcome back",
+  "setupText": "214 payments came in and went out since Wed 2 Sep. Catch up to see this week's profit.",
+  "setupCta": {
+   "label": "Catch up in 2 min",
+   "target": "catch-up"
+  },
+  "setupNote": "Last recorded profit: ₦9,800 on Wed 2 Sep"
+ }
+]
