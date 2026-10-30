@@ -69,6 +69,10 @@
 - [ ] Provider, consent and intro screen
 - [ ] Link generation for account managers; dry run in WhatsApp and Gmail in-app browsers
 
+- [x] Home card redesign (screenshot 2026-10-30): streak chip hidden; live card shows "Estimated profit · Today", today's amount + eye, "Month so far", savings nudge (25% of today, `saveShare`) + "Save today" (toast)
+- [ ] Savings flow behind "Save today"
+- [x] Less to read (feedback 2026-10-30): coach marks cut to 2 per screen (Home: eye, Save today; Profit: first payment, Submit; Overview: tabs, blue card) with one-line copy; MAI banner off Home; Profit, Overview, Add cash and "How is it calculated" copy trimmed; Manage streak row hidden
+
 ## Open
 - [ ] Real illustration asset for the hero Profit layout (CSS placeholder now)
 - [ ] Business switcher for F11 (open question 5 in wireframes)

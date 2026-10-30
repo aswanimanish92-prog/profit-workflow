@@ -5,6 +5,7 @@
  "dayOfMonth": 22,
  "lifecycleThreshold": 5,
  "lastUpdated": "2:15 PM",
+ "saveShare": 0.25,
  "lifecycles": {
   "early": {
    "label": "New user (2 days filled)",
@@ -25,5 +26,5 @@
    { "mode": "active_days", "label": "Only for the days I've entered records ({days} so far)" }
   ]
  },
- "missingNudge": "Missing entries for {missing} this month — add them to see your true monthly profit"
+ "missingNudge": "{missing} missing this month"
 }

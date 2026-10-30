@@ -14,7 +14,6 @@ import {
   MoneyInOut,
   PayYourself,
   ProfitInsight,
-  StreakRow,
   YourRecords,
 } from "@/components/overview/Sections";
 import { StreakSheet } from "@/components/card/StreakSheet";
@@ -130,11 +129,6 @@ export default function OverviewPage() {
       <div data-coach="accuracy">
         <CalcAndAccuracy accuracy={scenario.accuracy} />
       </div>
-      {scenario.streakRow && (
-        <div data-coach="streak">
-          <StreakRow row={scenario.streakRow} onOpen={() => setStreakOpen(true)} />
-        </div>
-      )}
 
       <StreakSheet open={streakOpen} onClose={() => setStreakOpen(false)} />
       <FeedbackSheet />

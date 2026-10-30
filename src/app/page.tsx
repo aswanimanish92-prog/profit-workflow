@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
@@ -25,7 +24,6 @@ import { useMockData } from "@/context/MockDataContext";
 import { BusinessOverviewCard } from "@/components/card/BusinessOverviewCard";
 import { StreakSheet } from "@/components/card/StreakSheet";
 import { ProfitViewSheet } from "@/components/card/ProfitViewSheet";
-import { MaiBanner } from "@/components/card/Mai";
 import { CoachMarks } from "@/components/shell/CoachMarks";
 import { useCardActions } from "@/components/card/useCardActions";
 import { splitKobo } from "@/lib/format";
@@ -52,7 +50,6 @@ export default function HomePage() {
   const { act, streakOpen, setStreakOpen } = useCardActions();
   // A3: no business activity, so the card sits below Services.
   const belowServices = homeCard.id !== "A3";
-  const [cardHidden, setCardHidden] = useState<boolean | undefined>(undefined);
   // First drill-down from a profit card asks MAI's timeframe question instead (once, until answered).
   const onCardAction = (t: CardTarget) => {
     if (homeCard.profitView && t !== "streak" && t !== "retry" && askProfitView()) return;
@@ -75,9 +72,7 @@ export default function HomePage() {
         onMaskChange={setMasked}
         onAction={onCardAction}
         onViewChange={(mode) => setProfitViewMode(mode, "pill")}
-        onHiddenChange={setCardHidden}
       />
-      {homeCard.profitView && <MaiBanner hidden={cardHidden} />}
     </section>
   );
 

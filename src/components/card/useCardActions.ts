@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 import { useMockData } from "@/context/MockDataContext";
 import type { CardTarget } from "@/types/mockData";
 
@@ -42,6 +43,9 @@ export function useCardActions() {
           break;
         case "streak":
           setStreakOpen(true);
+          break;
+        case "save":
+          toast("Savings opens here");
           break;
         case "retry": {
           // Refetch in place: loading skeleton, then the loaded card.

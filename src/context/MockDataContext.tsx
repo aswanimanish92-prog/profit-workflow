@@ -253,8 +253,6 @@ export function MockDataProvider({ children }: { children: ReactNode }) {
   const feedbackLog = useFeedbackLog();
   const [lastUpdated, setLastUpdated] = useState(data.profitView.lastUpdated);
   const [profitPromptOpen, setProfitPromptOpen] = useState(false);
-  /** Amount shown before the timeframe changed, so the card counts from it. Cleared once the count has run. */
-  const [viewSwitch, setViewSwitch] = useState<{ from: number; resolved: ResolvedProfitView } | null>(null);
 
   const baseCard = data.cardStates.find((c) => c.id === cardStateId) ?? data.cardStates[0];
   const dayId: DayId = baseCard.day ?? "healthy";
@@ -299,64 +297,46 @@ export function MockDataProvider({ children }: { children: ReactNode }) {
     [data, dayId, layoutBeforeReview],
   );
 
-  const currentStreak = streakState.current;
   // Cards marked live show the same today / last-7-days numbers as the Profit and Manage pages.
   // After a review is submitted, Home shows the "Just updated" state (C6) with the live number.
-  // Live cards show the resolved timeframe (today or month to date) and count up when it changes.
-  const switchFrom = viewSwitch?.resolved === profitView.resolved ? viewSwitch.from : undefined;
+  // Live cards lead with today's profit; the month so far sits under it.
   const toLiveCard = useCallback(
     (c: CardState): CardState => ({
       ...c,
       value: c.value.live
-        ? { ...c.value, amount: Math.abs(profitView.amount), loss: profitView.amount < 0, countFrom: switchFrom ?? c.value.countFrom }
+        ? { ...c.value, amount: Math.abs(profitView.today), loss: profitView.today < 0, countFrom: c.value.countFrom }
         : c.value,
       insight: c.insight.figures ? liveInsight(c.insight, figures[c.insight.figures]) : c.insight,
       profitView: c.value.live ? profitView : undefined,
     }),
-    [profitView, figures, switchFrom],
+    [profitView, figures],
   );
   const homeCard: CardState = useMemo(() => {
     if (!justUpdated) return toLiveCard(baseCard);
     const c6 = toLiveCard(data.cardStates.find((c) => c.id === "C6")!);
     const delta = justUpdated.to - justUpdated.from;
-    // The review changes today's profit; the month view moves by the same amount.
-    const offset = profitView.amount - profitView.today;
-    const to = justUpdated.to + offset;
+    const to = justUpdated.to;
     return {
       ...c6,
-      chip: { tone: "closed", days: currentStreak },
-      value: { mode: "amount", amount: Math.abs(to), countFrom: switchFrom ?? justUpdated.from + offset, loss: to < 0 },
+      value: { mode: "amount", amount: Math.abs(to), countFrom: justUpdated.from, loss: to < 0 },
       status: { tone: "delta", text: "Updated just now", delta },
       profitView,
     };
-  }, [baseCard, justUpdated, data.cardStates, currentStreak, profitView, toLiveCard]);
-
-  /** Lets the card count from what it showed to the new timeframe's amount. */
-  const countFromShown = useCallback(
-    (resolved: ResolvedProfitView) => {
-      setViewSwitch({ from: homeCard.value.amount ?? 0, resolved });
-      setTimeout(() => setViewSwitch(null), 1200);
-    },
-    [homeCard.value.amount],
-  );
+  }, [baseCard, justUpdated, data.cardStates, profitView, toLiveCard]);
 
   const setProfitViewMode = useCallback(
     (mode: ProfitViewMode, source: ProfitViewPreference["source"]) => {
-      const next = resolveProfitView(mode, data.profitView, lifecycle, profitView, lastUpdated);
-      if (next.resolved !== profitView.resolved) countFromShown(next.resolved);
       saveProfitViewPreference({ ...profitViewPref, mode, source });
     },
-    [data.profitView, lifecycle, profitView, lastUpdated, countFromShown, profitViewPref],
+    [profitViewPref],
   );
 
   const setLifecycle = useCallback(
     (l: Lifecycle) => {
       if (l === lifecycle) return;
-      // The month amount changes with the lifecycle; under auto the timeframe can too.
-      countFromShown(resolveProfitView(profitViewPref.mode, data.profitView, l, profitView, lastUpdated).resolved);
       setLifecycleRaw(l);
     },
-    [lifecycle, countFromShown, profitViewPref.mode, data.profitView, profitView, lastUpdated],
+    [lifecycle],
   );
 
   const askProfitView = useCallback(() => {
@@ -385,7 +365,6 @@ export function MockDataProvider({ children }: { children: ReactNode }) {
   const resetProfitView = useCallback(() => {
     saveProfitViewPreference(null);
     setProfitPromptOpen(false);
-    setViewSwitch(null);
   }, []);
 
   const setCategory = useCallback((id: string, c: TxnCategory) => {

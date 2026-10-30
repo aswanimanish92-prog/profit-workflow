@@ -2,10 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Eye, EyeOff, Lock, TriangleAlert } from "lucide-react";
-import type { CardInsight, CardState, CardTarget, ProfitView, ProfitViewMode } from "@/types/mockData";
+import type { CardInsight, CardState, CardTarget, ProfitViewMode } from "@/types/mockData";
 import { cn } from "@/lib/utils";
-import { compactNaira, insightNaira, naira, signedNaira, splitKobo } from "@/lib/format";
-import { StreakChip } from "./StreakChip";
+import { compactNaira, insightNaira, naira, splitKobo } from "@/lib/format";
 
 const MASK = "₦ •••";
 let tooltipShown = false;
@@ -24,8 +23,12 @@ interface Props {
   still?: boolean;
 }
 
-/** Home "Business overview" card: header + chip, value, status, insight, CTA. */
-export function BusinessOverviewCard({ card, masked, onMaskChange, onAction, onViewChange, onHiddenChange, still }: Props) {
+/**
+ * Home "Business overview" card: header, value, status, insight, CTA.
+ * Live profit cards (`profitView`) instead show today's profit, the month so far and a savings nudge.
+ * Streaks are hidden for now, so the chip isn't rendered.
+ */
+export function BusinessOverviewCard({ card, masked, onMaskChange, onAction, onHiddenChange, still }: Props) {
   // Follows the mask preference until the user taps the eye on this card.
   const [override, setOverride] = useState<boolean | null>(null);
   const hidden = override ?? (card.value.forceReveal ? false : card.startMasked ? true : masked);
@@ -75,14 +78,10 @@ export function BusinessOverviewCard({ card, masked, onMaskChange, onAction, onV
     >
       {card.status.confetti && !still && <Confetti />}
 
-      {/* 1 · Header + streak chip */}
+      {/* 1 · Header */}
       <div className="flex min-h-7 items-start justify-between gap-2">
         <div className="flex min-w-0 flex-col gap-0.5">
-          {view ? (
-            <TimeframePill view={view} onChange={onViewChange} />
-          ) : (
-            <span className="text-sm font-medium leading-5 text-[#5B6170]">{card.header}</span>
-          )}
+          <span className="text-sm font-medium leading-5 text-[#5B6170]">{view ? "Estimated profit · Today" : card.header}</span>
           {card.sub && (
             <button
               type="button"
@@ -93,18 +92,7 @@ export function BusinessOverviewCard({ card, masked, onMaskChange, onAction, onV
             </button>
           )}
         </div>
-        {card.chip && (
-          <div data-coach="chip">
-            <StreakChip tone={card.chip.tone} days={card.chip.days} onClick={() => onAction?.("streak")} />
-          </div>
-        )}
       </div>
-
-      {view && (
-        <div key={`label-${view.resolved}`} className="-mb-2 text-[13px] font-medium text-[#5B6170] animate-in fade-in slide-in-from-bottom-1 duration-300">
-          {view.label}
-        </div>
-      )}
 
       {/* 2 · Value + 5 · CTA */}
       <div className="flex min-h-11 items-center justify-between gap-3">
@@ -144,7 +132,7 @@ export function BusinessOverviewCard({ card, masked, onMaskChange, onAction, onV
             </div>
           )}
         </div>
-        {card.cta.label && (
+        {!view && card.cta.label && (
           <button
             type="button"
             data-coach="cta"
@@ -160,17 +148,34 @@ export function BusinessOverviewCard({ card, masked, onMaskChange, onAction, onV
       </div>
 
       {view && isAmount && (
-        <div key={`sub-${view.resolved}`} className="-mt-2 text-xs text-[#8A909C] animate-in fade-in slide-in-from-bottom-1 duration-300">
-          {view.secondary.before}
-          <span className="font-semibold text-[#5B6170]">
-            {valueHidden ? "₦ •••" : view.secondary.signed ? signedNaira(view.secondary.amount) : lossNaira(view.secondary.amount)}
-          </span>
-          {view.secondary.after}
-        </div>
+        <>
+          <div className="text-[13px] text-[#5B6170]">
+            Month so far -{" "}
+            <span className="font-bold text-[#16181D]">{valueHidden ? MASK : lossKobo(view.monthToDate)}</span>
+          </div>
+          {view.saveToday > 0 && (
+            <div className="mt-1 flex items-center justify-between gap-3">
+              <p className="text-[13px] leading-5 text-[#3F4451]">
+                From today&apos;s profit, you could save {valueHidden ? MASK : naira(view.saveToday)}.
+              </p>
+              <button
+                type="button"
+                data-coach="cta"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  go("save");
+                }}
+                className="h-10 flex-none rounded-full bg-[#1D4FD7] px-4 text-sm font-bold text-white transition hover:bg-[#1A45BF] active:translate-y-px"
+              >
+                Save today
+              </button>
+            </div>
+          )}
+        </>
       )}
 
       {/* 3 · Status line */}
-      {card.loading ? (
+      {view ? null : card.loading ? (
         <div className="flex flex-col gap-2">
           <div className="h-2.5 w-[230px] rounded-full bg-[#ECECE8]" />
           <div className="h-2.5 w-[180px] rounded-full bg-[#ECECE8]" />
@@ -182,7 +187,7 @@ export function BusinessOverviewCard({ card, masked, onMaskChange, onAction, onV
       )}
 
       {/* 4 · Insight line */}
-      {card.insight.kind !== "none" && !card.loading && (
+      {!view && card.insight.kind !== "none" && !card.loading && (
         <>
           <div className="h-px bg-[#ECECE8]" />
           <div data-coach="insight">
@@ -194,37 +199,10 @@ export function BusinessOverviewCard({ card, masked, onMaskChange, onAction, onV
   );
 }
 
-const lossNaira = (n: number) => (n < 0 ? `Loss ${naira(n)}` : naira(n));
-
-/** Header pill: Today | This month (till now). Logged-days view sits under the month segment. */
-function TimeframePill({ view, onChange }: { view: ProfitView; onChange?: (mode: ProfitViewMode) => void }) {
-  const segments = [
-    { mode: "today", label: "Today", on: view.resolved === "today" },
-    { mode: "mtd_till_date", label: "This month (till now)", on: view.resolved !== "today" },
-  ] as const;
-  return (
-    <div data-coach="timeframe" role="radiogroup" aria-label="Profit timeframe" className="flex w-fit rounded-full bg-[#F1F1EE] p-0.5 text-xs font-semibold">
-      {segments.map((s) => (
-        <button
-          key={s.mode}
-          type="button"
-          role="radio"
-          aria-checked={s.on}
-          onClick={(e) => {
-            e.stopPropagation();
-            if (!s.on) onChange?.(s.mode);
-          }}
-          className={cn(
-            "rounded-full px-3 py-1 transition-all duration-200",
-            s.on ? "bg-white text-[#16181D] shadow-sm" : "text-[#5B6170] hover:text-[#16181D]",
-          )}
-        >
-          {s.label}
-        </button>
-      ))}
-    </div>
-  );
-}
+const lossKobo = (n: number) => {
+  const { whole, kobo } = splitKobo(n);
+  return `${n < 0 ? "Loss " : ""}${whole}${kobo}`;
+};
 
 function Amount({ value, card }: { value: number; card: CardState }) {
   const { stale, loss, approx, compact } = card.value;

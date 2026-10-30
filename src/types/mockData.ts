@@ -39,6 +39,7 @@ export type CardTarget =
   | "overview-week"
   | "catch-up"
   | "streak"
+  | "save" // Savings (not built)
   | "retry"
   | "none";
 
@@ -407,6 +408,8 @@ export interface ProfitViewData {
   /** auto_lifecycle shows Today below this many logged days, the month from it on. */
   lifecycleThreshold: number;
   lastUpdated: string;
+  /** Home card suggests saving this share of today's profit. */
+  saveShare: number;
   lifecycles: Record<
     Lifecycle,
     {
@@ -432,6 +435,8 @@ export interface ProfitView {
   amount: number;
   today: number;
   monthToDate: number;
+  /** Suggested saving from today's profit (`saveShare`); 0 on a loss. */
+  saveToday: number;
   /** e.g. "Today's profit", "Oct profit (till today, 9:30 AM)". */
   label: string;
   /** Line under the value; `amount` is masked with the value. */

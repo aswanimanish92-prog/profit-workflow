@@ -130,6 +130,7 @@ export function resolveProfitView(
     resolvedBy: mode === "auto_lifecycle" ? ("lifecycle_rule" as const) : ("user" as const),
     today: f.today,
     monthToDate: f.monthToDate,
+    saveToday: Math.max(0, Math.round(f.today * data.saveShare)),
     completeness: { daysLoggedInMonth: days, daysElapsedInMonth: data.dayOfMonth, loggedDays, lastUpdatedTime },
     partial,
   };

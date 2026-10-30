@@ -12,11 +12,14 @@ Source of truth: `~/Downloads/Business Overview Card Wireframes.html` (boards A�
 | `/states` | Gallery of every card and blue-card state. |
 
 ## Card rules (from "Card anatomy")
-- Five slots: header + streak chip, value, status line, insight line, CTA.
+- Five slots: header, value, status line, insight line, CTA. Streaks are hidden for now: no chip on the Home card (the Manage streak row and sheet are unchanged).
 - Two tap zones: value/eye reveals in place; the rest opens the Manage page. New users (nothing to reveal) → whole card navigates.
 - Status line + CTA show the single highest-priority condition; chip, value, insight each show their own state.
 - Masked amounts follow the wallet preference; % and arrows are never masked. Re-mask on background.
 - Grey value = not today's number. Loss uses the word "Loss" in muted red. Never show ₦0 for an error.
+
+## Low-effort rule (feedback 2026-10-30)
+Merchants won't read. At most 2 coach marks per screen, each a short title and one line (`coachMarks.json`). Cut helper text and footnotes before adding a line; the Overview insight's full read is behind Listen. No MAI banner on Home (it repeated the card).
 
 ## Merchant build vs debug
 `/states` and the Prototype controls only appear in `next dev` or after opening a link with `?debug=<NEXT_PUBLIC_DEBUG_KEY>` (set the env var at build time; without it, debug can't be unlocked in a build).
@@ -45,7 +48,7 @@ CEO wants month-to-date profit; Product wants it tied to the merchant's lifecycl
 | Resolver, MAI's sentence (`maiQuote`), missing days, stored preference (localStorage `mbl-profit-view`), once-per-session ask, device feedback log | `src/lib/profitView.ts` |
 | State: `lifecycle`, `profitView`, `setProfitViewMode`, `askProfitView` / `answerProfitView`, `feedbackLog`; `useProfitPerspective()` selector | `src/context/MockDataContext.tsx` |
 | Month figure | A new user's `figures.month` is only their logged days, with no comparison, so the Home card, MAI, the Manage "This month" blue card and the Profit page's month to date all agree. |
-| Home card | Pill `Today | This month (till now)`, label, secondary line (`BusinessOverviewCard`); counts up when the timeframe changes |
+| Home card | Live cards (`BusinessOverviewCard`) always lead with today: "Estimated profit · Today", amount + eye, "Month so far - ₦X", then "From today's profit, you could save ₦Y." (`profitView.saveToday` = today × `saveShare` in profitView.json, hidden on a loss) with a "Save today" button (Savings not built: toast). No pill, status or insight line. |
 | MAI | `MaiBanner` under the Home card quotes `maiQuote`, masked with the card. New user on Today: "Your profit today is ₦X (₦Y across the 2 days you've recorded this month)." Month: "Your October profit till [time] today is ₦Y." |
 | First-tap question | First drill-down tap until answered (once per session) opens `ProfitViewSheet`. The answer sets the mode, animates the card, and logs a row (`feedbackResponse` = mode id) and a device log entry. |
 | Drill-down | Card body opens Manage on the matching tab (`today` or `month`). New users see `MissingDays`: the nudge plus a day strip, linking to /catch-up. |

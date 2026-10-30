@@ -92,10 +92,7 @@ export function ProfitScreen({ variant }: { variant?: ProfitLayout }) {
             {(layout === "hero" || layout === "test2") && <CashPrompt onAdd={() => setCashOpen(true)} />}
             <CashList entries={m.cashEntries} onRemove={m.removeCashEntry} />
 
-            <div className="mt-2">
-              <h2 className="text-lg font-bold">Review recent payments</h2>
-              <p className="text-[13px] text-[#5B6170]">Changing payment categories will affect profit</p>
-            </div>
+            <h2 className="mt-2 text-lg font-bold">Sort your payments</h2>
             {m.transactions.map((t, i) => (
               <TxnCard key={t.id} t={t} onPick={(c) => m.setCategory(t.id, c)} coach={i === 0} />
             ))}
@@ -179,7 +176,7 @@ function BlueHeader({ layout, totals, onAddCash }: { layout: ProfitLayout; total
               {lead.other.label}: {lead.other.value}
             </p>
           )}
-          <p className="text-xs text-white/85">{starred || noHistory ? "*Estimated. Moniepoint payments only." : "Moniepoint payments only"}</p>
+          <p className="text-xs text-white/85">{starred || noHistory ? "*Estimate" : "Estimate"}</p>
         </div>
         {layout !== "simple" && layout !== "no-history" && layout !== "test1" && (
           <AddCashButton label="Add cash" onClick={onAddCash} />
@@ -306,14 +303,14 @@ function ReviewedSummary({
           <span className={cn("rounded-full px-2.5 py-0.5 text-[13px]", ACC[accuracy])}>{accuracy}</span>
         </div>
         <div className="mt-3 flex items-center gap-2 rounded-xl bg-[#F4F4F1] px-3 py-2.5 text-sm">
-          <CircleCheck className="size-4 text-[#15803D]" /> Thanks for reviewing your payments
+          <CircleCheck className="size-4 text-[#15803D]" /> Payments reviewed
         </div>
         <button onClick={onAgain} className="mt-2 h-10 w-full rounded-full bg-[#DCE6FF] text-sm font-bold text-[#1D4FD7]">
           Review again
         </button>
       </section>
       <section className="flex items-center justify-between rounded-2xl bg-white p-4 text-sm">
-        <span>{cash.length ? `You added ${cash.length} payment${cash.length > 1 ? "s" : ""} from other sources` : "No cash or other-bank payments added"}</span>
+        <span>{cash.length ? `${cash.length} cash payment${cash.length > 1 ? "s" : ""} added` : "No cash added"}</span>
         <button data-coach="cash" onClick={onEditCash} className="rounded-full bg-[#DCE6FF] px-3 py-1.5 text-[13px] font-bold text-[#1D4FD7]">
           {cash.length ? "Edit" : "Add"}
         </button>
@@ -371,10 +368,7 @@ function TxnCard({ t, onPick, coach }: { t: Transaction; onPick: (c: TxnCategory
 function CashPrompt({ onAdd }: { onAdd: () => void }) {
   return (
     <section className="flex items-center justify-between gap-3 rounded-2xl bg-white p-4">
-      <div>
-        <div className="text-[15px] font-bold">Cash or money elsewhere?</div>
-        <div className="text-[13px] text-[#5B6170]">Any cash sales, spending or stock not listed here.</div>
-      </div>
+      <div className="text-[15px] font-bold">Any cash?</div>
       <button data-coach="cash" onClick={onAdd} className="flex-none rounded-full bg-[#DCE6FF] px-3.5 py-1.5 text-[13px] font-bold text-[#1D4FD7]">
         Add it
       </button>
@@ -417,8 +411,7 @@ function AddCashSheet({ open, onClose }: { open: boolean; onClose: () => void })
 
   return (
     <BottomSheet open={open} onClose={onClose} label="Add cash or other payments">
-      <h2 className="text-xl font-bold">Add cash or money elsewhere</h2>
-      <p className="mt-1 text-sm text-[#5B6170]">It counts toward today&apos;s profit as &quot;Cash and other banks&quot;.</p>
+      <h2 className="text-xl font-bold">Add cash</h2>
       <div className="mt-4 grid grid-cols-3 gap-2" role="radiogroup" aria-label="Type">
         {(["Sales", "Restock", "Expense"] as const).map((k) => (
           <button

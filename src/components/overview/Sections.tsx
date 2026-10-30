@@ -25,7 +25,6 @@ export function MoneyInOut({ money }: { money: OverviewScenario["money"] }) {
           <ArrowUp className="size-4 text-[#B42318]" /> Money out
         </div>
         <div className="mt-1 text-lg font-bold">{naira(money.out)}</div>
-        <div className="text-xs text-[#5B6170]">All payments out</div>
       </div>
     </section>
   );
@@ -146,8 +145,8 @@ export function ProfitInsight({ insight }: { insight: NonNullable<OverviewScenar
       <h3 className="text-lg font-bold">Profit insight</h3>
       <div className="mt-2 flex gap-3">
         <div className="flex-1">
+          {/* The full read is behind Listen, so the card only carries the headline. */}
           <p className="text-[15px] font-bold">{insight.heading}</p>
-          <p className="mt-1 text-[15px] leading-[22px] text-[#3F4451]">{insight.body}</p>
         </div>
         <button
           onClick={() => {
@@ -172,7 +171,6 @@ export function ProfitInsight({ insight }: { insight: NonNullable<OverviewScenar
           >
             <div className="flex-1">
               <div className="text-sm font-semibold">{r.title}</div>
-              <div className="text-xs text-[#5B6170]">{r.sub}</div>
             </div>
             {r.locked ? <Lock className="size-4 text-[#8A909C]" /> : <ChevronRight className="size-4 text-[#8A909C]" />}
           </button>
@@ -191,7 +189,6 @@ export function PayYourself({ pay }: { pay: NonNullable<OverviewScenario["payYou
         <span className="rounded-full bg-[#ECECE8] px-2 py-0.5 text-[11px] font-semibold text-[#3F4451]">Your team&apos;s module</span>
       </div>
       <p className="mt-1.5 text-[15px] font-bold">You&apos;ve taken {naira(pay.taken)} this month</p>
-      <p className="mt-2 text-[13px] text-[#3F4451]">Safe to take this month: about {naira(total)}, half your profit so far</p>
       <div className="mt-3 flex h-2 overflow-hidden rounded-full">
         <div className="bg-[#1D4FD7]" style={{ width: `${(pay.taken / total) * 100}%` }} />
         <div className="flex-1 bg-[#86CFA0]" />
@@ -200,7 +197,6 @@ export function PayYourself({ pay }: { pay: NonNullable<OverviewScenario["payYou
         <LegendRow color="bg-[#1D4FD7]" label="Already taken" value={naira(pay.taken)} />
         <LegendRow color="bg-[#86CFA0]" label="Still safe to take" value={naira(pay.safe)} />
       </div>
-      <p className="mt-2 text-xs text-[#5B6170]">Use this as a guide, not a fixed rule.</p>
     </section>
   );
 }
@@ -317,10 +313,9 @@ export function HowCalculatedSheet({ open, onClose }: { open: boolean; onClose: 
         Sales − Stock purchase − Expenses = Profit
       </div>
       <ul className="mt-3 flex list-disc flex-col gap-2 pl-5 text-sm text-[#3F4451]">
-        <li>We start with the payments already in your Moniepoint account.</li>
-        <li>You tell us which money in is a sale and which money out is stock or an expense. Personal and other payments are left out.</li>
-        <li>Cash and payments from other banks count once you add them.</li>
-        <li>The more payments you review, the higher the accuracy.</li>
+        <li>Built from your Moniepoint payments.</li>
+        <li>Personal money doesn&apos;t count.</li>
+        <li>Add cash to include it.</li>
       </ul>
       <button onClick={onClose} className="mt-5 h-12 w-full rounded-full bg-[#1D4FD7] text-[15px] font-bold text-white">
         Got it
