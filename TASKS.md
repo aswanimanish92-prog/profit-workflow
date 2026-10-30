@@ -72,6 +72,8 @@
 - [x] Home card redesign (screenshot 2026-10-30): streak chip hidden; live card shows "Estimated profit · Today", today's amount + eye, "Month so far", savings nudge (25% of today, `saveShare`) + "Save today" (toast)
 - [ ] Savings flow behind "Save today"
 - [x] Less to read (feedback 2026-10-30): coach marks cut to 2 per screen (Home: eye, Save today; Profit: first payment, Submit; Overview: tabs, blue card) with one-line copy; MAI banner off Home; Profit, Overview, Add cash and "How is it calculated" copy trimmed; Manage streak row hidden
+- [x] Overview deep dive (design lead brief 2026-10-30, `DeepDive.tsx`): payments to sort, summary per tab with cash, today's payments with a detail sheet to re-categorise (recalculates everywhere); blue card + Money in/out kept on top, other old sections removed; Overview tour = blue card, to sort
+- [ ] Week/month spending by category and per-payment lists (history only has sales/expense totals)
 
 ## Open
 - [ ] Real illustration asset for the hero Profit layout (CSS placeholder now)

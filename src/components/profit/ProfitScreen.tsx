@@ -402,7 +402,7 @@ function CashList({ entries, onRemove }: { entries: CashEntry[]; onRemove: (id: 
   );
 }
 
-function AddCashSheet({ open, onClose }: { open: boolean; onClose: () => void }) {
+export function AddCashSheet({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { addCashEntry } = useMockData();
   const [kind, setKind] = useState<CashEntry["kind"]>("Sales");
   const [amount, setAmount] = useState("");

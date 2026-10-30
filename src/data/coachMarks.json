@@ -29,12 +29,6 @@
  ],
  "overview": [
   {
-   "id": "tabs",
-   "target": "tabs",
-   "title": "Pick a time",
-   "body": "Today, this week or this month."
-  },
-  {
    "id": "blue",
    "target": "blue",
    "title": "What you kept",
@@ -42,6 +36,12 @@
    "variants": {
     "setup": "Set up once to see your profit here."
    }
+  },
+  {
+   "id": "review",
+   "target": "review",
+   "title": "Sort these first",
+   "body": "Tap a payment and say what it was."
   }
  ]
 }

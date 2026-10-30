@@ -6,16 +6,8 @@ import { toast } from "sonner";
 import { ArrowLeft, CalendarDays, Settings } from "lucide-react";
 import { useMockData } from "@/context/MockDataContext";
 import { BlueCard } from "@/components/overview/BlueCard";
-import { BusinessChart } from "@/components/overview/BusinessChart";
-import {
-  BookkeepingServices,
-  CalcAndAccuracy,
-  Invoices,
-  MoneyInOut,
-  PayYourself,
-  ProfitInsight,
-  YourRecords,
-} from "@/components/overview/Sections";
+import { CalcAndAccuracy, MoneyInOut } from "@/components/overview/Sections";
+import { DeepDive } from "@/components/overview/DeepDive";
 import { StreakSheet } from "@/components/card/StreakSheet";
 import { CoachMarks } from "@/components/shell/CoachMarks";
 import { FeedbackSheet } from "@/components/profit/FeedbackSheet";
@@ -32,7 +24,7 @@ const TABS: { id: Period; label: string }[] = [
 export default function OverviewPage() {
   const router = useRouter();
   const m = useMockData();
-  const { scenario, blueCard, period, chartFirst } = m;
+  const { scenario, blueCard, period } = m;
   const [streakOpen, setStreakOpen] = useState(false);
   // Feedback on the Profit flow waits until the Overview coach marks are out of the way.
   const { openDueFeedback } = m;
@@ -56,17 +48,6 @@ export default function OverviewPage() {
     } else if (t === "catch-up") router.push("/catch-up");
     else if (t === "review") router.push("/profit");
   };
-
-  const services = (
-    <div key="services" data-coach="services">
-      <BookkeepingServices />
-    </div>
-  );
-  const chart = (
-    <div key="chart" data-coach="chart">
-      <BusinessChart chart={scenario.chart} onSetup={() => act("setup")} />
-    </div>
-  );
 
   return (
     <div className="flex flex-col gap-4 px-4 pb-8">
@@ -107,25 +88,12 @@ export default function OverviewPage() {
       <div data-coach="blue">
         <BlueCard card={blueCard} onAction={act} />
       </div>
-      <MissingDays onAdd={() => router.push("/catch-up")} />
       <div data-coach="money">
         <MoneyInOut money={scenario.money} />
       </div>
-      {chartFirst ? [chart, services] : [services, chart]}
-      {scenario.insight && (
-        <div data-coach="insight">
-          <ProfitInsight insight={scenario.insight} />
-        </div>
-      )}
-      {scenario.payYourself && (
-        <div data-coach="pay">
-          <PayYourself pay={scenario.payYourself} />
-        </div>
-      )}
-      <div data-coach="records">
-        <YourRecords records={scenario.records} onCta={() => router.push("/profit")} onSeeAll={() => router.push("/catch-up")} />
-      </div>
-      <Invoices inv={scenario.invoices} />
+      <MissingDays onAdd={() => router.push("/catch-up")} />
+      {/* Nothing to break down until profit is set up. */}
+      {blueCard.kind !== "setup" && <DeepDive />}
       <div data-coach="accuracy">
         <CalcAndAccuracy accuracy={scenario.accuracy} />
       </div>

@@ -6,7 +6,7 @@ Source of truth: `~/Downloads/Business Overview Card Wireframes.html` (boards A�
 | Route | What |
 |---|---|
 | `/` | Home. Wallet card, Business overview card, Services. Card state comes from `cardStates.json`. |
-| `/overview` | Business overview (Manage page / "MBL"). Today · This week · This month tabs drive the blue card. |
+| `/overview` | Business overview (Manage page / "MBL"): the deep dive. Blue card (profit, sales, expenses) and Money in / Money out stay on top; the deep dive sits below them. Tabs drive the blue card and the summary (today: sales, stock bought, expenses, cash; week and month: sales, stock and expenses). Then payments to sort and all of today's payments; tapping one opens its detail and category, which recalculates profit everywhere. Services, chart, insight, pay yourself, records and invoices are no longer shown. |
 | `/profit` | Today's review. Recategorise payments, add cash, submit. Five layouts = the five screenshots. |
 | `/catch-up` | Missed-days queue (B5, B6, G1). |
 | `/states` | Gallery of every card and blue-card state. |
